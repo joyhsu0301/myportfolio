@@ -2,6 +2,54 @@ $(document).ready(function(){
 
 	var pngset = [
 		{
+			'name': 'scentlib',
+			'image': 'png/scentlib.png',
+			'height': '320',
+			'width' : '500',
+			'show': 'true'
+		},
+
+		{
+			'name': 'scentlib hover',
+			'image': 'png/scentlib3.png',
+			'height': '320',
+			'width' : '500',
+			'show': 'false'
+		},
+
+		{
+			'name': 'venmo',
+			'image': 'png/venmo.png',
+			'height': '200',
+			'width' : '200',
+			'show': 'true'
+		},
+
+		{
+			'name': 'venmo hover',
+			'image': 'png/venmo.gif',
+			'height': '120',
+			'width' : '200',
+			'show': 'false'
+		},
+
+		{
+			'name': 'gib',
+			'image': 'png/gib.png',
+			'height': '300',
+			'width' : '300',
+			'show': 'true'
+		}, 
+
+		{
+			'name': 'gib hover',
+			'image': 'png/gib2.png',
+			'height': '300',
+			'width' : '330',
+			'show': 'false'
+		}, 
+
+		{
 			'name': 'bembo',
 			'image': 'png/bembo.png',
 			'height': '300',
@@ -23,22 +71,6 @@ $(document).ready(function(){
 			'height': '200',
 			'width' : '350',
 			'show': 'true'
-		}, 
-
-		{
-			'name': 'gib',
-			'image': 'png/gib.png',
-			'height': '300',
-			'width' : '300',
-			'show': 'true'
-		}, 
-
-		{
-			'name': 'gib hover',
-			'image': 'png/gib2.png',
-			'height': '300',
-			'width' : '330',
-			'show': 'false'
 		}, 
 
 		{
@@ -89,38 +121,6 @@ $(document).ready(function(){
 			'show': 'false'
 		},
 
-		{
-			'name': 'scentlib',
-			'image': 'png/scentlib.png',
-			'height': '320',
-			'width' : '500',
-			'show': 'true'
-		},
-
-		{
-			'name': 'scentlib hover',
-			'image': 'png/scentlib3.png',
-			'height': '320',
-			'width' : '500',
-			'show': 'false'
-		},
-
-		{
-			'name': 'venmo',
-			'image': 'png/venmo.png',
-			'height': '200',
-			'width' : '200',
-			'show': 'true'
-		},
-
-		{
-			'name': 'venmo hover',
-			'image': 'png/venmo.gif',
-			'height': '120',
-			'width' : '200',
-			'show': 'false'
-		}
-
 	]
 
 	$('#lastname').on('mouseenter', function(){
@@ -145,8 +145,23 @@ $(document).ready(function(){
 		$('#png_box').append(pngDiv);
 	}
 
-	$('#firstname').click(function(){
-		$('#png_box').empty();
+	$('#firstname').data('clicked', false).click(function(){
+		if($(this).data('clicked') === false) {
+			$('#firstname').fadeOut();
+			$('#corner_text').fadeIn();
+			$('#chinesename').css({'display': 'inline'});
+			$('#lastname').css({'display': 'none'});
+		}
+	});
+
+	$('#portfolio').click(function(){
+		$('#introtext').fadeOut();
+		$('#png_box').css({'display': 'flex'});
+		if($('#firstname').data('clicked') === true) {
+			$('body').css({'background-color': 'white'});
+		} else {
+			$('#corner_text').fadeIn();
+		}
 	});
 
 

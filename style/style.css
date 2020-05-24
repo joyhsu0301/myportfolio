@@ -14,19 +14,21 @@
 
 /*for desktop*/
 body {
+	width: 100%;
+	height: 100%;
 	background-color: white;
-	/*overflow: hidden;*/
+	overflow-y: hidden;
 }
 h1 {
-	font-family: 'spacegroteskbold';
+	font-family: 'spacegroteskbold', sans-serif;
 	font-size: 100px;
 	color: black;
 }
 #introtext {
 	cursor: default;
 	position: fixed;
-	left: 20%;
-	top: 10%;
+	margin-left: 25%;
+	top: 8%;
 	line-height: 115px;
 	z-index: 10;
 }
@@ -41,9 +43,60 @@ h1 {
 	display: none;
 	color: rgb(255,206,43);
 }
+#portfolio:hover {
+	color: rgb(255,206,43);
+	animation: jiggle 0.5s infinite;
+	display: inline-block;
+	cursor: pointer;
+}
 #png_box {
+	display: none;
+	flex-direction: row;
 	width: 100%;
 	height: 100%;
 }
 
+/*J O Y in the corners*/
+#corner_text {
+	cursor: pointer;
+	font-family: 'futura', sans-serif;
+	font-size: 70px;
+	color: rgb(255,206,43);
+	display: none;
+}
+#justforfun {
+	position: fixed;
+	top: 0px;
+	left: 20px;
+}
+#otherworks {
+	position: fixed;
+	top: 0px;
+	right: 20px;
+}
+#aboutme {
+	position: fixed;
+	bottom: 0px;
+	left: 20px;
+}
+
 /*for mobile*/
+@media only screen and (max-width: 900px) {
+	body {
+		overflow: visible; 
+	}
+	#introtext {
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -6,15 +6,9 @@ $(document).ready(function(){
 			'image': 'png/scentlib.png',
 			'height': '320',
 			'width' : '500',
-			'show': 'true'
-		},
-
-		{
-			'name': 'scentlib hover',
-			'image': 'png/scentlib3.png',
-			'height': '320',
-			'width' : '500',
-			'show': 'false'
+			'h_image': 'png/scentlib3.png',
+			'h_height': '320',
+			'h_width': '500'
 		},
 
 		{
@@ -22,15 +16,9 @@ $(document).ready(function(){
 			'image': 'png/venmo.png',
 			'height': '200',
 			'width' : '200',
-			'show': 'true'
-		},
-
-		{
-			'name': 'venmo hover',
-			'image': 'png/venmo.gif',
-			'height': '120',
-			'width' : '200',
-			'show': 'false'
+			'h_image': 'png/venmo.gif',
+			'h_height': '200',
+			'h_width': '250'
 		},
 
 		{
@@ -38,15 +26,9 @@ $(document).ready(function(){
 			'image': 'png/gib.png',
 			'height': '300',
 			'width' : '300',
-			'show': 'true'
-		}, 
-
-		{
-			'name': 'gib hover',
-			'image': 'png/gib2.png',
-			'height': '300',
-			'width' : '330',
-			'show': 'false'
+			'h_image': 'png/gib2.png',
+			'h_height': '300',
+			'h_width': '400'
 		}, 
 
 		{
@@ -54,23 +36,16 @@ $(document).ready(function(){
 			'image': 'png/bembo.png',
 			'height': '300',
 			'width' : '200',
-			'show': 'true'
-		},
-
-		{
-			'name': 'bembo hover',
-			'image': 'png/bembo2.png',
-			'height': '300',
-			'width' : '200',
-			'show': 'false'
+			'h_image': 'png/bembo2.png',
+			'h_height': '340',
+			'h_width': '200'
 		}, 
 
 		{
 			'name': 'friction logo',
 			'image': 'png/frictionlogo.png',
 			'height': '200',
-			'width' : '350',
-			'show': 'true'
+			'width' : '350'
 		}, 
 
 		{
@@ -78,31 +53,19 @@ $(document).ready(function(){
 			'image': 'png/massimo.png',
 			'height': '330',
 			'width' : '280',
-			'show': 'true'
+			'h_image': 'png/massimo2.png',
+			'h_height': '300',
+			'h_width': '400'
 		},
-
-		{
-			'name': 'massimo hover',
-			'image': 'png/massimo2.png',
-			'height': '120',
-			'width' : '200',
-			'show': 'false'
-		}, 
 
 		{
 			'name': 'postcard',
 			'image': 'png/postcard.png',
 			'height': '240',
 			'width' : '360',
-			'show': 'true'
-		}, 
-
-		{
-			'name': 'postcard hover',
-			'image': 'png/postcard2.png',
-			'height': '120',
-			'width' : '200',
-			'show': 'false'
+			'h_image': 'png/postcard2.png',
+			'h_height': '240',
+			'h_width': '360'
 		}, 
 
 		{
@@ -110,19 +73,14 @@ $(document).ready(function(){
 			'image': 'png/room.png',
 			'height': '320',
 			'width' : '400',
-			'show': 'true'
-		},
-
-		{
-			'name': 'room hover',
-			'image': 'png/room2.png',
-			'height': '120',
-			'width' : '200',
-			'show': 'false'
-		},
+			'h_image': 'png/room2.png',
+			'h_height': '300',
+			'h_width': '240'
+		}
 
 	]
 
+	// interactions for the text on first page 
 	$('#lastname').on('mouseenter', function(){
 		$('#lastname').css({'display': 'none'});
 		$('#chinesename').css({'display': 'inline'});
@@ -131,19 +89,6 @@ $(document).ready(function(){
 		$('#lastname').css({'display': 'inline'});
 		$('#chinesename').css({'display': 'none'});
 	});
-
-
-	for(i=0; i<pngset.length; i++){
-		var pngDiv = $('<div/>', {'class': 'pngdiv'})
-		.data('png', pngset[i])
-		if(pngset[i].show === 'true'){
-			$(pngDiv).append('<img src="'+pngset[i].image+'" style="width: '+pngset[i].width+'px; height: '+pngset[i].height+'px;">')
-		}
-		// .on('mouseenter', function(){
-
-		// });
-		$('#png_box').append(pngDiv);
-	}
 
 	$('#firstname').data('clicked', false).click(function(){
 		if($(this).data('clicked') === false) {
@@ -164,6 +109,20 @@ $(document).ready(function(){
 		}
 	});
 
-
+	// appending og display list of my portfolio
+	for(i=0; i<pngset.length; i++){
+		var pngDiv = $('<div/>', {'class': 'pngdiv'})
+		.data('png', pngset[i])
+		.append('<img class="show" src="'+pngset[i].image+'" style="width: '+pngset[i].width+'px; height: '+pngset[i].height+'px;">')
+		.on('mouseenter', function(){
+			$(this).empty();
+			$(this).append('<img src="'+$(this).data("png").h_image+'" style="width: '+$(this).data("png").h_width+'px; height: '+$(this).data("png").h_height+'px;">');
+		})
+		.on('mouseleave', function(){
+			$(this).empty();
+			$(this).append('<img src="'+$(this).data("png").image+'" style="width: '+$(this).data("png").width+'px; height: '+$(this).data("png").height+'px;">');
+		});
+		$('#png_box').append(pngDiv);
+	}
 
 });

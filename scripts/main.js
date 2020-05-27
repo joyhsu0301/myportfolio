@@ -118,7 +118,8 @@ $(document).ready(function(){
 
 		})
 		.on('mouseenter', pngDiv, function(){
-			$('#tail').append('<p class="cursor_text">'+$(this).data("png").name+'</p>');
+			$('#tail').css({'display': 'inline'})
+			.append('<p class="cursor_text">'+$(this).data("png").name+'</p>');
 			// $(this).append('<img src="'+$(this).data("png").h_image+'" style="width: '+$(this).data("png").h_width+'px; height: '+$(this).data("png").h_height+'px;">');
 		})
 		.on('mouseleave', pngDiv, function(){

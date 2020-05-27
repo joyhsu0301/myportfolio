@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	var pngset = [
 		{
-			'name': 'scentlib',
+			'name': 'Scent Library',
 			'image': 'png/scentlib.png',
 			'height': '320',
 			'width' : '500',
@@ -11,18 +11,18 @@ $(document).ready(function(){
 			'h_width': '500'
 		},
 
-		{
-			'name': 'venmo',
-			'image': 'png/venmo.png',
-			'height': '200',
-			'width' : '200',
-			'h_image': 'png/venmo.gif',
-			'h_height': '200',
-			'h_width': '250'
-		},
+		// {
+		// 	'name': 'venmo',
+		// 	'image': 'png/venmo.png',
+		// 	'height': '200',
+		// 	'width' : '200',
+		// 	'h_image': 'png/venmo.gif',
+		// 	'h_height': '200',
+		// 	'h_width': '250'
+		// },
 
 		{
-			'name': 'gib',
+			'name': 'Gold Is Boring',
 			'image': 'png/gib.png',
 			'height': '300',
 			'width' : '300',
@@ -32,26 +32,26 @@ $(document).ready(function(){
 		}, 
 
 		{
-			'name': 'bembo',
+			'name': 'Bembo Type Poster',
 			'image': 'png/bembo.png',
 			'height': '300',
 			'width' : '200',
 			'h_image': 'png/bembo2.png',
-			'h_height': '340',
+			'h_height': '360',
 			'h_width': '200'
 		}, 
 
-		{
-			'name': 'friction logo',
-			'image': 'png/frictionlogo.png',
-			'height': '200',
-			'width' : '350'
-		}, 
+		// {
+		// 	'name': 'friction logo',
+		// 	'image': 'png/frictionlogo.png',
+		// 	'height': '200',
+		// 	'width' : '350'
+		// }, 
 
 		{
-			'name': 'massimo',
+			'name': 'Zine',
 			'image': 'png/massimo.png',
-			'height': '330',
+			'height': '360',
 			'width' : '280',
 			'h_image': 'png/massimo2.png',
 			'h_height': '300',
@@ -59,7 +59,7 @@ $(document).ready(function(){
 		},
 
 		{
-			'name': 'postcard',
+			'name': 'Postcard',
 			'image': 'png/postcard.png',
 			'height': '240',
 			'width' : '360',
@@ -69,13 +69,13 @@ $(document).ready(function(){
 		}, 
 
 		{
-			'name': 'room',
+			'name': 'Dorm Room Illustrations',
 			'image': 'png/room.png',
 			'height': '320',
 			'width' : '400',
 			'h_image': 'png/room2.png',
-			'h_height': '300',
-			'h_width': '240'
+			'h_height': '400',
+			'h_width': '300'
 		}
 
 	]
@@ -113,16 +113,29 @@ $(document).ready(function(){
 	for(i=0; i<pngset.length; i++){
 		var pngDiv = $('<div/>', {'class': 'pngdiv'})
 		.data('png', pngset[i])
-		.append('<img class="show" src="'+pngset[i].image+'" style="width: '+pngset[i].width+'px; height: '+pngset[i].height+'px;">')
-		.on('mouseenter', function(){
-			$(this).empty();
-			$(this).append('<img src="'+$(this).data("png").h_image+'" style="width: '+$(this).data("png").h_width+'px; height: '+$(this).data("png").h_height+'px;">');
+		.append('<img class="ondisplay" src="'+pngset[i].image+'" style="width: '+pngset[i].width+'px; height: '+pngset[i].height+'px;">')
+		.click(function(){
+
 		})
-		.on('mouseleave', function(){
-			$(this).empty();
-			$(this).append('<img src="'+$(this).data("png").image+'" style="width: '+$(this).data("png").width+'px; height: '+$(this).data("png").height+'px;">');
+		.on('mouseenter', pngDiv, function(){
+			$('#tail').append('<p class="cursor_text">'+$(this).data("png").name+'</p>');
+			// $(this).append('<img src="'+$(this).data("png").h_image+'" style="width: '+$(this).data("png").h_width+'px; height: '+$(this).data("png").h_height+'px;">');
+		})
+		.on('mouseleave', pngDiv, function(){
+			$('#tail').empty();
+			// $(this).empty()
+			// .append('<img src="'+$(this).data("png").image+'" style="width: '+$(this).data("png").width+'px; height: '+$(this).data("png").height+'px;">');
 		});
 		$('#png_box').append(pngDiv);
 	}
+
+	$(document).bind('mousemove', function(e){
+		$('#tail').css({
+			'left': e.pageX +5 + 'px',
+			'top': e.pageY  -20 + 'px'
+		});
+	});
+
+
 
 });

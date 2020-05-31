@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	console.log('dont know where to click? Try clicking on "portfolio" and see what happens!');
+
 	var pngset = [
 		{
 			'name': 'Scent Library',
@@ -83,12 +85,6 @@ $(document).ready(function(){
 
 	]
 
-	var randombg = [
-		{ 'img': ''},
-		{ 'img': ''},
-		{ 'img': ''}
-	]
-
 	// interactions for the text on first page 
 	$('#lastname').on('mouseenter', function(){
 		$('#lastname').css({'display': 'none'});
@@ -109,6 +105,7 @@ $(document).ready(function(){
 	});
 
 	$('#portfolio').click(function(){
+		console.log('there it is! when u scroll left, u can see all my works so far in lil pngs! now why not try clicking on each of them?');
 		$('#introtext').fadeOut();
 		$('#png_box').css({'display': 'flex'});
 		if($('#firstname').data('clicked') === true) {
@@ -171,7 +168,7 @@ $(document).ready(function(){
 	});
 
 	$('#random').click(function(){
-		$('body').css({'background-color': ''})
+
 	});
 
 

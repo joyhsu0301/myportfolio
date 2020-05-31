@@ -83,9 +83,11 @@ h1 {
 	align-items: center;
 	align-content: center;
 	flex-wrap: nowrap;
+	z-index: 5;
 }
 .pngdiv {
 	margin: 50px;
+	z-index: 5;
 }
 
 /*J O Y in the corners*/
@@ -101,25 +103,42 @@ h1 {
 	position: fixed;
 	top: 0px;
 	left: 20px;
+	z-index: 20;
 }
 #otherworks {
 	position: fixed;
 	top: 0px;
 	right: 20px;
+	z-index: 20;
 }
 #aboutme {
 	position: fixed;
 	bottom: 0px;
 	left: 20px;
+	z-index: 20;
 }
 #random {
 	position: fixed;
 	bottom: -10px;
 	right: 15px;
+	z-index: 20;
 }
 #smiley_icon {
 	width: 80px;
 	height: 80px;
+	z-index: 20;
+}
+
+/*return button*/
+#goback{
+	cursor: pointer;
+	font-family: 'futura', sans-serif;
+	font-size: 50px;
+	color: white;
+	display: none;
+	position: fixed;
+	top: 10px;
+	left: 20px;
 }
 
 /*my info navigation bar*/
@@ -141,6 +160,7 @@ h1 {
 	color: white;
 	font-size: 70px;
 	cursor: pointer;
+	z-index: 10;
 }
 #close:hover {
 	color: red;
@@ -148,36 +168,65 @@ h1 {
 #mytext {
 	cursor: default;
 	position: absolute;
-	bottom: 10px;
+	top: 10px;
 	left: 20px;
-	width: 97%;
+	height: 100%;
+	width: 45%;
 	font-family: 'spacegroteskregular', sans-serif;
 	font-size: 25px;
 	color: black;
 }
-#mail {
+#mail, #linkedin, #insta {
 	font-family: 'spacegroteskbold'
 }
 
-/*return button*/
-#goback{
-	cursor: pointer;
-	font-family: 'futura', sans-serif;
-	font-size: 50px;
-	color: white;
-	display: none;
+/*random background box*/
+/*#test {
+	top: 0px;
+	left: 0px;
 	position: fixed;
-	top: 10px;
-	left: 20px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	opacity: 0.85;
+}*/
+
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
+	#mytext {
+		width: 80%;
+	}
 }
 
 /*for mobile*/
 @media only screen and (max-width: 700px) {
+	body {
+		overflow-y: visible;
+	}
+	h1 {
+		font-size: 80px;
+		text-align: left;
+	}
 	#introtext {
-		display: none;
+		line-height: 80px;
+		top: 13vh;
+	}
+	#firstname {
+		color: rgb(255,206,43);
+	}
+	#chinesename {
+		color: black;
+	}
+	#portfolio {
+		color: rgb(255,206,43);
 	}
 	#png_box {
 		flex-direction: column;
+		width: 100%;
+	}
+	#mytext {
+		top: 75px;
+		font-size: 20px;
+		width: 92vw;
 	}
 }
 

@@ -17,7 +17,7 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: white;
-	/*overflow-y: hidden;*/
+	overflow-y: hidden;
 }
 body::-webkit-scrollbar {
 	display: none;
@@ -37,8 +37,9 @@ h1 {
 #introtext {
 	cursor: default;
 	position: fixed;
+	top: 8%;
 	width: 100vw;
-	height: 100vh;
+	height: 50vh;
 	line-height: 115px;
 	z-index: 10;
 }
@@ -59,6 +60,19 @@ h1 {
 	display: inline-block;
 	cursor: pointer;
 }
+
+/*first page hover transitions*/
+/*#expand_transition {
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	transform-origin: center;
+	transition: all 1s linear;
+	z-index: 1;
+}*/
 
 /*sliding box with pngs of all works*/
 #png_box {
@@ -81,6 +95,7 @@ h1 {
 	font-size: 70px;
 	color: rgb(255,206,43);
 	display: none;
+	z-index: 20;
 }
 #justforfun {
 	position: fixed;
@@ -107,10 +122,62 @@ h1 {
 	height: 80px;
 }
 
+/*my info navigation bar*/
+#myinfo_nav {
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 0px;
+	position: fixed;
+	overflow: hidden;
+	transition: all 0.8s ease;
+	background-color: rgb(255,206,43); 
+	z-index: 20;
+}
+#close {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	color: white;
+	font-size: 70px;
+	cursor: pointer;
+}
+#close:hover {
+	color: red;
+}
+#mytext {
+	cursor: default;
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+	width: 97%;
+	font-family: 'spacegroteskregular', sans-serif;
+	font-size: 25px;
+	color: black;
+}
+#mail {
+	font-family: 'spacegroteskbold'
+}
+
+/*return button*/
+#goback{
+	cursor: pointer;
+	font-family: 'futura', sans-serif;
+	font-size: 50px;
+	color: white;
+	display: none;
+	position: fixed;
+	top: 10px;
+	left: 20px;
+}
+
 /*for mobile*/
 @media only screen and (max-width: 700px) {
 	#introtext {
 		display: none;
+	}
+	#png_box {
+		flex-direction: column;
 	}
 }
 

@@ -41,15 +41,18 @@ $(document).ready(function(){
 			'h_width': '200'
 		}, 
 
-		// {
-		// 	'name': 'friction logo',
-		// 	'image': 'png/frictionlogo.png',
-		// 	'height': '200',
-		// 	'width' : '350'
-		// }, 
+		{
+			'name': 'Friction Logo',
+			'image': 'png/frictionlogo.png',
+			'height': '200',
+			'width' : '350',
+			'h_image': 'png/frictionlogo.png',
+			'h_height': '200',
+			'h_width': '350'
+		}, 
 
 		{
-			'name': 'Zine',
+			'name': 'Vignelli Zine',
 			'image': 'png/massimo.png',
 			'height': '360',
 			'width' : '280',
@@ -78,6 +81,12 @@ $(document).ready(function(){
 			'h_width': '300'
 		}
 
+	]
+
+	var randombg = [
+		{ 'img': ''},
+		{ 'img': ''},
+		{ 'img': ''}
 	]
 
 	// interactions for the text on first page 
@@ -114,22 +123,32 @@ $(document).ready(function(){
 		var pngDiv = $('<div/>', {'class': 'pngdiv'})
 		.data('png', pngset[i])
 		.append('<img class="ondisplay" src="'+pngset[i].image+'" style="width: '+pngset[i].width+'px; height: '+pngset[i].height+'px;">')
-		.click(function(){
-
-		})
-		.on('mouseenter', pngDiv, function(){
+		.on('mouseenter', function(){
 			$('#tail').css({'display': 'inline'})
+			.empty()
 			.append('<p class="cursor_text">'+$(this).data("png").name+'</p>');
-			// $(this).append('<img src="'+$(this).data("png").h_image+'" style="width: '+$(this).data("png").h_width+'px; height: '+$(this).data("png").h_height+'px;">');
 		})
-		.on('mouseleave', pngDiv, function(){
+		.on('mouseleave', function(){
 			$('#tail').empty();
-			// $(this).empty()
-			// .append('<img src="'+$(this).data("png").image+'" style="width: '+$(this).data("png").width+'px; height: '+$(this).data("png").height+'px;">');
+		})
+		.click(function(){
+			$(this).empty().append('<img class="ondisplay" src="'+$(this).data("png").h_image+'" style="width: '+$(this).data("png").h_width+'px; height: '+$(this).data("png").h_height+'px;">');
+			// $('#expand_transition').css({'transform': 'scale(110)', 'background-color': 'rgb(255,206,43)', 'z-index': '1'});
+			$('#corner_text').fadeOut();
+			$('#goback').fadeIn();
+			$('body').css({'background-color': 'rgb(255,206,43)', 'transition': 'all 0.5s linear'});
 		});
 		$('#png_box').append(pngDiv);
 	}
 
+	$('#goback').click(function(){
+		// $('#expand_transition').css({'transform': 'scale(0.1)', 'background-color': 'none'});
+		$('#goback').fadeOut();
+		$('#corner_text').fadeIn();
+		$('body').css({'background-color': 'white', 'transition': 'all 0.5s linear'});
+	});
+
+	// name of each project follows cursor on hover
 	$(document).bind('mousemove', function(e){
 		$('#tail').css({
 			'left': e.pageX +5 + 'px',
@@ -137,6 +156,23 @@ $(document).ready(function(){
 		});
 	});
 
+	//corner text interactions 
+	$('#aboutme').on('mouseenter', function(){
+		$('#aboutme').empty().append('YOU WANNA REACH OUT? CLICK ME!');
+	});
+	$('#aboutme').on('mouseleave', function(){
+		$('#aboutme').empty().append('Y');
+	});
+	$('#aboutme').click(function(){
+		$('#myinfo_nav').css({'height':'100%'});
+	});
+	$('#close').click(function(){
+		$('#myinfo_nav').css({'height':'0%'});
+	});
+
+	$('#random').click(function(){
+		$('body').css({'background-color': ''})
+	});
 
 
 });

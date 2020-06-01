@@ -96,6 +96,7 @@ $(document).ready(function(){
 	});
 
 	$('#firstname').data('clicked', false).click(function(){
+		$('#mobile_hint').css({'display': 'none'});
 		if($(this).data('clicked') === false) {
 			$('#firstname').fadeOut();
 			$('#corner_text').fadeIn();
@@ -108,6 +109,7 @@ $(document).ready(function(){
 		console.log('there it is! when u scroll left, u can see all my works so far in lil pngs! now why not try clicking on each of them?');
 		$('#introtext').fadeOut();
 		$('#png_box').css({'display': 'flex'});
+		$('#mobile_hint').css({'display': 'none'});
 		if($('#firstname').data('clicked') === true) {
 			$('body').css({'background-color': 'white'});
 		} else {

@@ -34,6 +34,9 @@ h1 {
 	color: blue;
 	z-index: 10;
 }
+#mobile_hint {
+	display: none;
+}
 #introtext {
 	cursor: default;
 	position: fixed;
@@ -199,12 +202,24 @@ h1 {
 
 /*for mobile*/
 @media only screen and (max-width: 700px) {
+
 	body {
-		overflow-y: visible;
+		overflow: visible;
 	}
 	h1 {
 		font-size: 80px;
 		text-align: left;
+	}
+	#mobile_hint {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100vw;
+		display: block;
+		font-family: 'spacegroteskregular';
+		font-size: 21px;
+		color: white;
+		background-color: rgb(255,206,43);
 	}
 	#introtext {
 		line-height: 80px;
@@ -221,7 +236,9 @@ h1 {
 	}
 	#png_box {
 		flex-direction: column;
-		width: 100%;
+		left: 0px;
+		width: 60vw;
+		height: 100vh;
 	}
 	#mytext {
 		top: 75px;

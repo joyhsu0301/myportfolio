@@ -3,6 +3,18 @@ $(document).ready(function(){
 	console.log('dont know where to click? Try clicking on "portfolio" and see what happens!');
 
 	var pngset = [
+
+		// {
+		// 	'name': 'This Website!',
+		// 	'image': 'png/scentlib.png',
+		// 	'height': '320',
+		// 	'width' : '500',
+		// 	'h_image': 'png/scentlib3.png',
+		// 	'h_height': '320',
+		// 	'h_width': '500',
+		// 	'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
+		// },
+
 		{
 			'name': 'Scent Library',
 			'image': 'png/scentlib.png',
@@ -10,18 +22,19 @@ $(document).ready(function(){
 			'width' : '500',
 			'h_image': 'png/scentlib3.png',
 			'h_height': '320',
-			'h_width': '500'
+			'h_width': '500',
+			'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
 		},
 
-		// {
-		// 	'name': 'venmo',
-		// 	'image': 'png/venmo.png',
-		// 	'height': '200',
-		// 	'width' : '200',
-		// 	'h_image': 'png/venmo.gif',
-		// 	'h_height': '200',
-		// 	'h_width': '250'
-		// },
+		{
+			'name': 'venmo',
+			'image': 'png/venmo.png',
+			'height': '200',
+			'width' : '200',
+			'h_image': 'png/venmo.gif',
+			'h_height': '200',
+			'h_width': '250'
+		},
 
 		{
 			'name': 'Gold Is Boring',
@@ -30,7 +43,8 @@ $(document).ready(function(){
 			'width' : '300',
 			'h_image': 'png/gib2.png',
 			'h_height': '300',
-			'h_width': '400'
+			'h_width': '400',
+			'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
 		}, 
 
 		{
@@ -40,7 +54,8 @@ $(document).ready(function(){
 			'width' : '200',
 			'h_image': 'png/bembo2.png',
 			'h_height': '360',
-			'h_width': '200'
+			'h_width': '200',
+			'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
 		}, 
 
 		{
@@ -50,7 +65,8 @@ $(document).ready(function(){
 			'width' : '350',
 			'h_image': 'png/frictionlogo.png',
 			'h_height': '200',
-			'h_width': '350'
+			'h_width': '350',
+			'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
 		}, 
 
 		{
@@ -60,7 +76,8 @@ $(document).ready(function(){
 			'width' : '280',
 			'h_image': 'png/massimo2.png',
 			'h_height': '300',
-			'h_width': '400'
+			'h_width': '400',
+			'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
 		},
 
 		{
@@ -70,7 +87,8 @@ $(document).ready(function(){
 			'width' : '360',
 			'h_image': 'png/postcard2.png',
 			'h_height': '240',
-			'h_width': '360'
+			'h_width': '360',
+			'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
 		}, 
 
 		{
@@ -80,7 +98,8 @@ $(document).ready(function(){
 			'width' : '400',
 			'h_image': 'png/room2.png',
 			'h_height': '400',
-			'h_width': '300'
+			'h_width': '300',
+			'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
 		}
 
 	]
@@ -117,8 +136,8 @@ $(document).ready(function(){
 		}
 	});
 
-	// appending og display list of my portfolio
-	for(i=0; i<pngset.length; i++){
+	function originalpng (pngset) {
+			for(i=0; i<pngset.length; i++){
 		var pngDiv = $('<div/>', {'class': 'pngdiv'})
 		.data('png', pngset[i])
 		.append('<img class="ondisplay" src="'+pngset[i].image+'" style="width: '+pngset[i].width+'px; height: '+pngset[i].height+'px;">')
@@ -131,16 +150,25 @@ $(document).ready(function(){
 			$('#tail').empty();
 		})
 		.click(function(){
-			$(this).empty().append('<img class="ondisplay" src="'+$(this).data("png").h_image+'" style="width: '+$(this).data("png").h_width+'px; height: '+$(this).data("png").h_height+'px;">');
 			// $('#expand_transition').css({'transform': 'scale(110)', 'background-color': 'rgb(255,206,43)', 'z-index': '1'});
 			$('#corner_text').fadeOut();
 			$('#goback').fadeIn();
 			$('body').css({'background-color': 'rgb(255,206,43)', 'transition': 'all 0.5s linear'});
+			$('#png_box').children().not($(this)).remove();
+			$('#png_box').append('<img class="ondisplay" src="'+$(this).data("png").h_image+'" style="width: '+$(this).data("png").h_width+'px; height: '+$(this).data("png").h_height+'px;">');
+			$('#png_box').append('<div class="description">'+$(this).data("png").text+'</div>');
+			$('#png_box').append('<img class="ondisplay" src="'+$(this).data("png").h_image+'" style="width: '+$(this).data("png").h_width+'px; height: '+$(this).data("png").h_height+'px;">');
 		});
 		$('#png_box').append(pngDiv);
+		}
 	}
 
+	// appending og display list of my portfolio
+	originalpng(pngset);
+
 	$('#goback').click(function(){
+		$('#png_box').empty();
+		originalpng(pngset);
 		// $('#expand_transition').css({'transform': 'scale(0.1)', 'background-color': 'none'});
 		$('#goback').fadeOut();
 		$('#corner_text').fadeIn();
@@ -164,9 +192,11 @@ $(document).ready(function(){
 	});
 	$('#aboutme').click(function(){
 		$('#myinfo_nav').css({'height':'100%'});
+		$('body').css({'overflow': 'hidden'});
 	});
 	$('#close').click(function(){
 		$('#myinfo_nav').css({'height':'0%'});
+		$('body').css({'overflow': 'visible'});
 	});
 
 	$('#random').click(function(){

@@ -93,6 +93,16 @@ h1 {
 	z-index: 5;
 }
 
+/*box containing text about pngs*/
+.description {
+	margin: 50px;
+	width: 400px;
+	font-family: 'spacegroteskregular';
+	font-size: 20px;
+	line-height: 20px;
+	color: blue;
+}
+
 /*J O Y in the corners*/
 #corner_text {
 	cursor: pointer;
@@ -213,9 +223,10 @@ h1 {
 	}
 	#mobile_hint {
 		position: absolute;
+		margin: 0px;
 		top: 0px;
 		left: 0px;
-		width: 100vw;
+		width: 100%;
 		display: block;
 		font-family: 'spacegroteskregular';
 		font-size: 21px;

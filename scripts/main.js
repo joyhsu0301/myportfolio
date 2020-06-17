@@ -212,7 +212,7 @@ $(document).ready(function(){
 	});
 	$('#close').click(function(){
 		$('#myinfo_nav').css({'height':'0%'});
-		$('body').css({'overflow': 'visible'});
+		$('body').css({'overflow-x': 'visible'});
 	});
 
 	$('#random').click(function(){

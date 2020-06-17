@@ -19,8 +19,14 @@ body {
 	background-color: white;
 	overflow-y: hidden;
 }
-body::-webkit-scrollbar {
-	display: none;
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: lightgray;
+}
+::-webkit-scrollbar-thumb {
+	background: blue;
 }
 h1 {
 	font-family: 'spacegroteskbold', sans-serif;
@@ -80,7 +86,7 @@ h1 {
 /*sliding box with pngs of all works*/
 #png_box {
 	position: absolute;
-	top: 19%;
+	top: 0px;
 	display: none;
 	flex-direction: row;
 	align-items: center;
@@ -89,7 +95,7 @@ h1 {
 	z-index: 5;
 }
 .pngdiv {
-	margin: 50px;
+	margin: 60px;
 	z-index: 5;
 }
 
@@ -99,7 +105,6 @@ h1 {
 	width: 400px;
 	font-family: 'spacegroteskregular';
 	font-size: 20px;
-	line-height: 20px;
 	color: blue;
 }
 
@@ -190,20 +195,28 @@ h1 {
 	font-size: 22px;
 	color: black;
 }
-#mail, #linkedin, #insta {
-	font-family: 'spacegroteskbold'
+#mail, #linkedin, #insta, #resume {
+	font-family: 'spacegroteskbold';
+}
+.links {
+	text-decoration: none;
+	color: black;
+}
+.links:hover {
+	color: blue;
 }
 
 /*random background box*/
-/*#test {
+.wall {
+	display: none;
 	top: 0px;
 	left: 0px;
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
 	z-index: 1;
-	opacity: 0.85;
-}*/
+	/*opacity: 0.85;*/
+}
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
 	#mytext {
@@ -216,6 +229,9 @@ h1 {
 
 	body {
 		overflow-y: visible;
+	}
+	body::-webkit-scrollbar {
+		display: none;
 	}
 	h1 {
 		font-size: 75px;

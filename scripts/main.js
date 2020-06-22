@@ -37,6 +37,9 @@ $(document).ready(function(){
 			'h2_image': 'png/scentlib2.png',
 			'h2_height': '620',
 			'h2_width': '950',
+			'h3_image': 'png/scentlib4.png',
+			'h3_height': '620',
+			'h3_width': '950',
 			'text': 'For a final project, we were tasked with creating a website which somehow presented a collection of objects using JSON objects.<br><br>Mimicking an online retail experience, I decided to create a website containing a collection of scents familiar or interesting to me. I wanted to translate my experiences of and memories associated with these scents into an interactive webpage. <a href="https://joyhsu0301.github.io/core-lab/final/index.html" target="_blank" class="links">Go To The Website</a>'
 		},
 
@@ -130,11 +133,17 @@ $(document).ready(function(){
 
 	$('#firstname').data('clicked', false).click(function(){
 		$('#mobile_hint').css({'display': 'none'});
-		if($(this).data('clicked') === false) {
-			$('#firstname').fadeOut();
+		$(this).data('clicked', true);
+		$('#corner_text').fadeIn();
+		if($('#firstname').data('clicked') === false) {
+			// $('#firstname').fadeOut();
 			$('#corner_text').fadeIn();
-			$('#chinesename').css({'display': 'inline'});
-			$('#lastname').css({'display': 'none'});
+			//$('#chinesename').css({'display': 'inline'});
+			// $('#lastname').css({'display': 'none'});
+		} else {
+			$('#firstname').hover(function(){
+				$('#firstname').css({'animation': 'none', 'color': 'black', 'cursor': 'default'});
+			});
 		}
 	});
 
@@ -173,6 +182,8 @@ $(document).ready(function(){
 			$('#png_box').append('<img class="ondisplay" src="'+$(this).data("png").h_image+'" style="width: '+$(this).data("png").h_width+'px; height: '+$(this).data("png").h_height+'px;">');
 			$('#png_box').append('<div class="description">'+$(this).data("png").text+'</div>');
 			$('#png_box').append('<img class="ondisplay" src="'+$(this).data("png").h2_image+'" style="width: '+$(this).data("png").h2_width+'px; height: '+$(this).data("png").h2_height+'px;">');
+			$('#png_box').append('<img class="ondisplay" src="'+$(this).data("png").h3_image+'" style="width: '+$(this).data("png").h3_width+'px; height: '+$(this).data("png").h3_height+'px;">');
+			$('#background').css({'display':'none'});
 		});
 		$('#png_box').append(pngDiv);
 		}
@@ -189,6 +200,7 @@ $(document).ready(function(){
 		$('#goback').fadeOut();
 		$('#corner_text').fadeIn();
 		$('body').css({'background-color': 'white', 'transition': 'all 0.5s linear'});
+		$('#background').css({'display': 'inline', 'transition': 'all 0.5s linear'});
 	});
 
 	// name of each project follows cursor on hover
@@ -200,6 +212,26 @@ $(document).ready(function(){
 	});
 
 	//corner text interactions 
+	$('#justforfun').on('mouseenter', function(){
+		$('#justforfun').empty().append('JUST FOR FUN');
+	});
+	$('#justforfun').on('mouseleave', function(){
+		$('#justforfun').empty().append('J');
+	});
+	$('#justforfun').click(function(){
+
+	});
+
+	$('#otherworks').on('mouseenter', function(){
+		$('#otherworks').empty().append('HELLO');
+	});
+	$('#otherworks').on('mouseleave', function(){
+		$('#otherworks').empty().append('O');
+	});
+	$('#otherworks').click(function(){
+
+	});
+
 	$('#aboutme').on('mouseenter', function(){
 		$('#aboutme').empty().append('YOU WANNA REACH OUT? CLICK ME!');
 	});
@@ -208,7 +240,7 @@ $(document).ready(function(){
 	});
 	$('#aboutme').click(function(){
 		$('#myinfo_nav').css({'height':'100%'});
-		$('body').css({'overflow': 'hidden'});
+		$('body').css({'overflow-x': 'hidden'});
 	});
 	$('#close').click(function(){
 		$('#myinfo_nav').css({'height':'0%'});

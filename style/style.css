@@ -95,8 +95,14 @@ h1 {
 	z-index: 5;
 }
 .pngdiv {
-	margin: 60px;
+	margin: 50px;
+	padding: 10px;
 	z-index: 5;
+}
+.ondisplay {
+	margin-left: 50px;
+	margin-right: 50px; 
+	padding: 10px;
 }
 
 /*box containing text about pngs*/

@@ -21,26 +21,32 @@ $(document).ready(function(){
 			'height': '200',
 			'width' : '220',
 			'h_image': 'png/thiswebsite.png',
-			'h_height': '620',
+			'h_height': '600',
 			'h_width': '950',
-			'text': 'I have always wanted to create an online portfolio that best described me as a person and a designer. While I was creating this website, I made sure to do exactly that.'
+			'h2_image': 'png/thiswebsite3.png',
+			'h2_height': '600',
+			'h2_width': '950',
+			'h3_image': 'png/thiswebsite2.png',
+			'h3_height': '600',
+			'h3_width': '950',
+			'text': 'I have always wanted to create an online portfolio that best described me as a person and a designer. While I was creating this website, I made sure to do exactly that. hello this is filler text because i dunno what text i wanna put here yet so please bear with me thank you for your understanding. Still really dont know what to type blah blah blah blah <br><br> please keep browsing around this website!'
 		},
 
 		{
 			'name': 'Scent Library',
 			'image': 'png/scentlib.png',
-			'height': '620',
+			'height': '600',
 			'width' : '950',
 			'h_image': 'png/scentlib3.png',
-			'h_height': '620',
+			'h_height': '600',
 			'h_width': '950',
 			'h2_image': 'png/scentlib2.png',
-			'h2_height': '620',
+			'h2_height': '600',
 			'h2_width': '950',
 			'h3_image': 'png/scentlib4.png',
-			'h3_height': '620',
+			'h3_height': '600',
 			'h3_width': '950',
-			'text': 'For a final project, we were tasked with creating a website which somehow presented a collection of objects using JSON objects.<br><br>Mimicking an online retail experience, I decided to create a website containing a collection of scents familiar or interesting to me. I wanted to translate my experiences of and memories associated with these scents into an interactive webpage. <a href="https://joyhsu0301.github.io/core-lab/final/index.html" target="_blank" class="links">Go To The Website</a>'
+			'text': 'For a final project, we were tasked with creating a website which somehow presented a collection of objects using JSON objects.<br><br>Mimicking an online retail experience, I decided to create a website containing a collection of scents familiar or interesting to me. I wanted to translate my experiences of and memories associated with these scents into an interactive webpage everyone can play around with. <a href="https://joyhsu0301.github.io/core-lab/final/index.html" target="_blank" class="links">Go To The Website</a>'
 		},
 
 		// {
@@ -56,12 +62,18 @@ $(document).ready(function(){
 		{
 			'name': 'Gold Is Boring',
 			'image': 'png/gib.png',
-			'height': '500',
-			'width' : '500',
-			'h_image': 'png/gib2.png',
-			'h_height': '300',
-			'h_width': '400',
-			'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
+			'height': '600',
+			'width' : '600',
+			'h_image': 'png/gib4.png',
+			'h_height': '470',
+			'h_width': '550',
+			'h2_image': 'png/gib2.png',
+			'h2_height': '470',
+			'h2_width': '650',
+			'h3_image': 'png/gib3.png',
+			'h3_height': '470',
+			'h3_width': '350',
+			'text': 'filler text'
 		}, 
 
 		{
@@ -70,16 +82,22 @@ $(document).ready(function(){
 			'height': '400',
 			'width' : '300',
 			'h_image': 'png/bembo2.png',
-			'h_height': '360',
-			'h_width': '200',
-			'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
+			'h_height': '600',
+			'h_width': '350',
+			'h2_image': 'png/bembo3.png',
+			'h2_height': '550',
+			'h2_width': '420',
+			'h3_image': 'png/bembo4.png',
+			'h3_height': '550',
+			'h3_width': '420',
+			'text': 'filler text'
 		}, 
 
 		{
 			'name': 'Vignelli Zine',
 			'image': 'png/massimo.png',
-			'height': '560',
-			'width' : '430',
+			'height': '650',
+			'width' : '500',
 			'h_image': 'png/massimo2.png',
 			'h_height': '300',
 			'h_width': '400',
@@ -89,8 +107,8 @@ $(document).ready(function(){
 		{
 			'name': 'Friction Logo',
 			'image': 'png/frictionlogo.png',
-			'height': '300',
-			'width' : '550',
+			'height': '350',
+			'width' : '650',
 			'h_image': 'png/frictionlogo.png',
 			'h_height': '300',
 			'h_width': '550',
@@ -100,8 +118,8 @@ $(document).ready(function(){
 		{
 			'name': 'Postcard',
 			'image': 'png/postcard.png',
-			'height': '440',
-			'width' : '700',
+			'height': '540',
+			'width' : '830',
 			'h_image': 'png/postcard2.png',
 			'h_height': '240',
 			'h_width': '360',
@@ -111,8 +129,8 @@ $(document).ready(function(){
 		{
 			'name': 'Dorm Room Illustrations',
 			'image': 'png/room.png',
-			'height': '420',
-			'width' : '500',
+			'height': '520',
+			'width' : '600',
 			'h_image': 'png/room2.png',
 			'h_height': '400',
 			'h_width': '300',

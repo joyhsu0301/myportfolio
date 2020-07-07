@@ -29,7 +29,7 @@ $(document).ready(function(){
 			'h3_image': 'png/thiswebsite2.png',
 			'h3_height': '600',
 			'h3_width': '950',
-			'text': 'I have always wanted to create an online portfolio that best described me as a person and a designer. While I was creating this website, I made sure to do exactly that. hello this is filler text because i dunno what text i wanna put here yet so please bear with me thank you for your understanding. Still really dont know what to type blah blah blah blah <br><br> please keep browsing around this website!'
+			'text': 'After creating the Scent Library project, I was inspired to create my own portfolio website with HTML, CSS and JavaScript. I wanted this website to best describe me as a person and a designer. <br><br> Be sure to keep browsing around this website!'
 		},
 
 		{
@@ -73,7 +73,7 @@ $(document).ready(function(){
 			'h3_image': 'png/gib3.png',
 			'h3_height': '470',
 			'h3_width': '350',
-			'text': 'filler text'
+			'text': 'We were given an open-ended class assignment where we had the freedom to choose our own content and curate them into a designed booklet of some sort. <br><br>‘Gold is Boring’ is an anthology of articles written by various authors about their differing views on minimalism. The simple layout of the articles are contrasted with the Japanese snacks, a symbol of maximalism due to its mesmerizing packaging, chaotically placed over the spreads as the zine progresses. This reflects the conflicting opinions on minimalism as discussed in the articles throughout.'
 		}, 
 
 		{
@@ -90,7 +90,7 @@ $(document).ready(function(){
 			'h3_image': 'png/bembo4.png',
 			'h3_height': '550',
 			'h3_width': '420',
-			'text': 'filler text'
+			'text': 'We were given an open-ended class assignment where we had the freedom to choose our own content and curate them into a designed booklet of some sort.'
 		}, 
 
 		{
@@ -101,7 +101,7 @@ $(document).ready(function(){
 			'h_image': 'png/massimo2.png',
 			'h_height': '300',
 			'h_width': '400',
-			'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
+			'text': 'massimo vignelli yessiR!'
 		},
 
 		{

@@ -49,7 +49,8 @@ h1 {
 	top: 8%;
 	width: 100vw;
 	height: 50vh;
-	line-height: 115px;
+	margin-left: 50px;
+	line-height: 110px;
 	z-index: 10;
 }
 #firstname {
@@ -68,6 +69,34 @@ h1 {
 	animation: jiggle 0.5s infinite;
 	display: inline-block;
 	cursor: pointer;
+}
+
+/*hints on the first page*/
+#hint {
+	position: fixed;
+	left: 35%;
+	top: 62%;
+	display: none;
+}
+#psst {
+	color: rgb(255,206,43);
+	font-family: bembo;
+	font-size: 35px;
+}
+#name_pronounce {
+	position: fixed;
+	top: 28%;
+	left: 40%;
+	display: none;
+}
+#pronounce {
+	color: rgb(255,206,43);
+	font-family: bembo;
+	font-size: 35px;
+}
+#pro {
+	font-style: oblique;
+	font-weight: bold;
 }
 
 /*sliding box with pngs of all works*/
@@ -90,15 +119,6 @@ h1 {
 	margin-left: 50px;
 	margin-right: 50px; 
 	padding: 10px;
-}
-
-/*box containing text about pngs*/
-.description {
-	margin: 50px;
-	width: 400px;
-	font-family: 'spacegroteskregular';
-	font-size: 20px;
-	color: blue;
 }
 
 /*J O Y in the corners*/
@@ -184,18 +204,6 @@ h1 {
 }
 .links:hover {
 	color: blue;
-}
-
-/*random background box*/
-.wall {
-	display: none;
-	top: 0px;
-	left: 0px;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	z-index: 1;
-	/*opacity: 0.85;*/
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {

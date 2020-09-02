@@ -95,10 +95,12 @@ $(document).ready(function(){
 	$('#lastname').on('mouseenter', function(){
 		$('#lastname').css({'display': 'none'});
 		$('#chinesename').css({'display': 'inline'});
+		$('#name_pronounce').css({'display': 'inline'});
 	});
 	$('#lastname').on('mouseleave', function(){
 		$('#lastname').css({'display': 'inline'});
 		$('#chinesename').css({'display': 'none'});
+		$('#name_pronounce').css({'display': 'none'});
 	});
 
 	$('#firstname').data('clicked', false).click(function(){
@@ -117,9 +119,16 @@ $(document).ready(function(){
 		}
 	});
 
+	$('#portfolio').on('mouseenter', function(){
+		$('#hint').css({'display': 'inline'});
+	});
+	$('#portfolio').on('mouseleave', function(){
+		$('#hint').css({'display': 'none'});
+	});
 	$('#portfolio').click(function(){
 		console.log('there it is! when u scroll left, u can see all my works so far in lil pngs! now why not try clicking on each of them?');
 		$('#introtext').fadeOut();
+		$('#intro_png').fadeOut();
 		$('#png_box').css({'display': 'flex'});
 		$('#mobile_hint').css({'display': 'none'});
 		if($('#firstname').data('clicked') === true) {
@@ -204,7 +213,7 @@ $(document).ready(function(){
 	});
 
 	$('#aboutme').on('mouseenter', function(){
-		$('#aboutme').empty().append('YOU WANNA REACH OUT? CLICK ME!');
+		$('#aboutme').empty().append('YOU WANNA LEARN MORE?');
 	});
 	$('#aboutme').on('mouseleave', function(){
 		$('#aboutme').empty().append('Y');

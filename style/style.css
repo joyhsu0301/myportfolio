@@ -40,7 +40,7 @@ h1 {
 	color: blue;
 	z-index: 10;
 }
-#mobile_hint {
+/*#mobile_hint {
 	display: none;
 }
 #introtext {
@@ -69,10 +69,10 @@ h1 {
 	animation: jiggle 0.5s infinite;
 	display: inline-block;
 	cursor: pointer;
-}
+}*/
 
 /*hints on the first page*/
-#hint {
+/*#hint {
 	position: fixed;
 	left: 35%;
 	top: 62%;
@@ -97,13 +97,13 @@ h1 {
 #pro {
 	font-style: oblique;
 	font-weight: bold;
-}
+}*/
 
 /*sliding box with pngs of all works*/
 #png_box {
 	position: absolute;
-	top: 0px;
-	display: none;
+	top: -70px;
+	display: flex;
 	flex-direction: row;
 	align-items: center;
 	align-content: center;
@@ -123,32 +123,30 @@ h1 {
 
 /*J O Y in the corners*/
 #corner_text {
-	cursor: pointer;
-	font-family: 'futura', sans-serif;
-	font-size: 70px;
-	color: rgb(255,206,43);
-	display: none;
+	font-family: 'spacegroteskbold', sans-serif;
+	font-size: 40px;
+	color: rgb(0,0,255);
+	display: inline;
 	z-index: 20;
 }
-#justforfun {
+#my_name {
+	cursor: default;
 	position: fixed;
-	top: 0px;
+	bottom: 10px;
 	left: 20px;
-	z-index: 20;
-}
-#otherworks {
-	position: fixed;
-	top: 0px;
-	right: 20px;
 	z-index: 20;
 }
 #aboutme {
+	cursor: pointer;
 	position: fixed;
-	bottom: 0px;
-	left: 20px;
+	bottom: 10px;
+	right: 20px;
 	z-index: 20;
 }
-#random {
+#aboutme:hover {
+	color: rgb(0,0,0);
+}
+/*#home {
 	position: fixed;
 	bottom: -10px;
 	right: 15px;
@@ -158,7 +156,7 @@ h1 {
 	width: 80px;
 	height: 80px;
 	z-index: 20;
-}
+}*/
 
 /*my info navigation bar*/
 #myinfo_nav {
@@ -169,7 +167,7 @@ h1 {
 	position: fixed;
 	overflow: hidden;
 	transition: all 0.8s ease;
-	background-color: rgb(255,206,43); 
+	background-color: rgb(0,0,0); 
 	z-index: 20;
 }
 #close {
@@ -193,14 +191,14 @@ h1 {
 	width: 45%;
 	font-family: 'spacegroteskregular', sans-serif;
 	font-size: 22px;
-	color: black;
+	color: white;
 }
 #mail, #linkedin, #insta, #resume {
 	font-family: 'spacegroteskbold';
 }
 .links {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 .links:hover {
 	color: blue;

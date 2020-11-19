@@ -16,19 +16,19 @@ $(document).ready(function(){
 		// },
 
 		{
-			'name': 'This Website!',
+			'name': 'this website!',
 			'image': 'smiley.png',
 			'height': '200',
 			'width' : '220',
-			'link': 'online_portfolio.html'
+			'link': 'this_website.html'
 		},
 
 		{
-			'name': 'Scent Library',
+			'name': 'the scent library',
 			'image': 'png/scentlib.png',
 			'height': '600',
 			'width' : '950',
-			'link': 'online_portfolio.html'
+			'link': 'scent_lib.html'
 		},
 
 		// {
@@ -42,43 +42,43 @@ $(document).ready(function(){
 		// },
 
 		{
-			'name': 'Gold Is Boring',
+			'name': 'gold is boring',
 			'image': 'png/gib.png',
 			'height': '600',
 			'width' : '600',
-			'link': 'online_portfolio.html'
+			'link': 'gib.html'
 		}, 
 
 		{
-			'name': 'Bembo Type Poster',
+			'name': 'bembo type poster',
 			'image': 'png/bembo.png',
 			'height': '400',
 			'width' : '300',
-			'link': 'online_portfolio.html'
+			'link': 'bembo.html'
 		}, 
 
 		{
-			'name': 'Vignelli Zine',
+			'name': 'vignelli zine',
 			'image': 'png/massimo.png',
 			'height': '650',
 			'width' : '500',
-			'link': 'online_portfolio.html'
+			'link': 'vignelli.html'
 		},
 
 		{
-			'name': 'Friction Logo',
+			'name': 'friction museum logo',
 			'image': 'png/frictionlogo.png',
 			'height': '350',
 			'width' : '650',
-			'link': 'online_portfolio.html'
+			'link': 'friction.html'
 		}, 
 
 		{
-			'name': 'Postcard',
+			'name': 'richard serra postcard',
 			'image': 'png/postcard.png',
 			'height': '540',
 			'width' : '830',
-			'link': 'online_portfolio.html'
+			'link': 'postcard.html'
 		}, 
 
 		// {
@@ -119,24 +119,24 @@ $(document).ready(function(){
 	// 	}
 	// });
 
-	$('#portfolio').on('mouseenter', function(){
-		$('#hint').css({'display': 'inline'});
-	});
-	$('#portfolio').on('mouseleave', function(){
-		$('#hint').css({'display': 'none'});
-	});
-	$('#portfolio').click(function(){
-		console.log('there it is! when u scroll left, u can see all my works so far in lil pngs! now why not try clicking on each of them?');
-		$('#introtext').fadeOut();
-		$('#intro_png').fadeOut();
-		$('#png_box').css({'display': 'flex'});
-		$('#mobile_hint').css({'display': 'none'});
-		if($('#firstname').data('clicked') === true) {
-			$('body').css({'background-color': 'white'});
-		} else {
-			$('#corner_text').fadeIn();
-		}
-	});
+	// $('#portfolio').on('mouseenter', function(){
+	// 	$('#hint').css({'display': 'inline'});
+	// });
+	// $('#portfolio').on('mouseleave', function(){
+	// 	$('#hint').css({'display': 'none'});
+	// });
+	// $('#portfolio').click(function(){
+	// 	console.log('there it is! when u scroll left, u can see all my works so far in lil pngs! now why not try clicking on each of them?');
+	// 	$('#introtext').fadeOut();
+	// 	$('#intro_png').fadeOut();
+	// 	$('#png_box').css({'display': 'flex'});
+	// 	$('#mobile_hint').css({'display': 'none'});
+	// 	if($('#firstname').data('clicked') === true) {
+	// 		$('body').css({'background-color': 'white'});
+	// 	} else {
+	// 		$('#corner_text').fadeIn();
+	// 	}
+	// });
 
 	function originalpng (pngset) {
 			for(i=0; i<pngset.length; i++){

@@ -5,14 +5,19 @@ $(document).ready(function(){
 	var pngset = [
 
 		// {
-		// 	'name': 'ALbum Covers',
+		// 	'name': 're-imagined album covers',
 		// 	'image': 'png/vowels.png',
 		// 	'height': '320',
 		// 	'width' : '500',
-		// 	'h_image': 'png/vowels.png',
-		// 	'h_height': '320',
-		// 	'h_width': '500',
-		// 	'text': 'hello hello testing! testing, hope this is workingggg oh yay it is!'
+		//  'link': 'covers.html'
+		// },
+
+		// {
+		// 	'name': 'the ordinary things',
+		// 	'image': 'png/tot.png',
+		// 	'height': '600',
+		// 	'width' : '600',
+		// 	'link': 'tot.html'
 		// },
 
 		{
@@ -32,7 +37,7 @@ $(document).ready(function(){
 		},
 
 		// {
-		// 	'name': 'venmo',
+		// 	'name': 'parasite: venmo',
 		// 	'image': 'png/venmo.png',
 		// 	'height': '200',
 		// 	'width' : '200',
@@ -44,10 +49,18 @@ $(document).ready(function(){
 		{
 			'name': 'gold is boring',
 			'image': 'png/gib.png',
-			'height': '600',
-			'width' : '600',
+			'height': '650',
+			'width' : '525',
 			'link': 'gib.html'
 		}, 
+
+		// {
+		// 	'name': 'french cuisine wikibook',
+		// 	'image': 'png/wiki.png',
+		// 	'height': '600',
+		// 	'width' : '600',
+		// 	'link': 'wiki.html'
+		// },
 
 		{
 			'name': 'bembo type poster',
@@ -66,7 +79,7 @@ $(document).ready(function(){
 		},
 
 		{
-			'name': 'friction museum logo',
+			'name': 'friction museum',
 			'image': 'png/frictionlogo.png',
 			'height': '350',
 			'width' : '650',

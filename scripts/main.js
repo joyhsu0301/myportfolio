@@ -13,6 +13,14 @@ $(document).ready(function(){
 		// },
 
 		// {
+		// 	'name': 'liminal: an animated short',
+		// 	'image': 'png/liminal.png',
+		// 	'height': '320',
+		// 	'width' : '500',
+		//  'link': 'liminal.html'
+		// },
+
+		// {
 		// 	'name': 'the ordinary things',
 		// 	'image': 'png/tot.png',
 		// 	'height': '600',

@@ -204,16 +204,25 @@ h1 {
 	color: blue;
 }
 
+/*for ipad?*/
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
-	#mytext {
-		width: 80%;
-	}
+
 }
 
 /*for mobile*/
 @media only screen and (max-width: 700px) {
 
 	body {
+		background-color: black;
+	}
+	h1 {
+		display: none;
+	}
+	div {
+		display: none;
+	}
+
+/*	body {
 		overflow-y: visible;
 	}
 	body::-webkit-scrollbar {
@@ -264,7 +273,7 @@ h1 {
 	}
 	.cursor_text {
 		display: none;
-	}
+	}*/
 }
 
 

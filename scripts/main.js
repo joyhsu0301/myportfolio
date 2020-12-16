@@ -12,21 +12,21 @@ $(document).ready(function(){
 		//  'link': 'covers.html'
 		// },
 
-		// {
-		// 	'name': 'liminal: an animated short',
-		// 	'image': 'png/liminal.png',
-		// 	'height': '320',
-		// 	'width' : '500',
-		//  'link': 'liminal.html'
-		// },
+		{
+			'name': 'liminal: an animated short',
+			'image': 'png/goo.png',
+			'height': '400',
+			'width' : '400',
+		 'link': 'goo.html'
+		},
 
-		// {
-		// 	'name': 'the ordinary things',
-		// 	'image': 'png/tot.png',
-		// 	'height': '600',
-		// 	'width' : '600',
-		// 	'link': 'tot.html'
-		// },
+		{
+			'name': 'the ordinary things',
+			'image': 'png/tot.png',
+			'height': '300',
+			'width' : '450',
+			'link': 'tot.html'
+		},
 
 		{
 			'name': 'this website!',

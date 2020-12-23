@@ -100,15 +100,7 @@ $(document).ready(function(){
 			'height': '540',
 			'width' : '830',
 			'link': 'postcard.html'
-		}, 
-
-		// {
-		// 	'name': 'Spaces',
-		// 	'image': 'png/room.png',
-		// 	'height': '520',
-		// 	'width' : '600',
-		// 	'link': 'online_portfolio.html'
-		// }
+		}
 
 	]
 

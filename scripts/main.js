@@ -4,20 +4,20 @@ $(document).ready(function(){
 
 	var pngset = [
 
-		// {
-		// 	'name': 're-imagined album covers',
-		// 	'image': 'png/vowels.png',
-		// 	'height': '320',
-		// 	'width' : '500',
-		//  'link': 'covers.html'
-		// },
+		{
+			'name': 're-imagined album covers',
+			'image': 'png/ac.png',
+			'height': '420',
+			'width' : '520',
+		 	'link': 'covers.html'
+		},
 
 		{
 			'name': 'liminal: an animated short',
 			'image': 'png/goo.png',
 			'height': '400',
 			'width' : '400',
-		 'link': 'goo.html'
+		 	'link': 'goo.html'
 		},
 
 		{

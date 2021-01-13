@@ -30,9 +30,9 @@ $(document).ready(function(){
 
 		{
 			'name': 'this website!',
-			'image': 'smiley.png',
+			'image': 'logo.png',
 			'height': '200',
-			'width' : '220',
+			'width' : '200',
 			'link': 'this_website.html'
 		},
 

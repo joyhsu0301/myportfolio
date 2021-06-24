@@ -197,12 +197,13 @@ h1 {
 	line-height: 30px;
 	color: white;
 }
-#mail, #linkedin, #insta, #arena {
+#mail, #linkedin, #insta, #arena, #portfolio {
 	font-family: 'spacegroteskbold';
 }
 .links {
 	text-decoration: none;
-	color: white;
+	color: rgb(237,237,237);
+	font-family: 'spacegroteskregular';
 }
 .links:hover {
 	color: blue;

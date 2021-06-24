@@ -3,6 +3,21 @@ $(document).ready(function(){
 	console.log('dont know where to click? Try clicking on "portfolio" and see what happens!');
 
 	var pngset = [
+		// {
+		// 	'name': 'illustration portfolio',
+		// 	'image': 'png/sketch.jpg',
+		// 	'height': '400',
+		// 	'width' : '200',
+		//  	'link': 'covers.html'
+		// },
+
+		{
+			'name': 'the time capsule',
+			'image': 'png/timecap.png',
+			'height': '600',
+			'width' : '980',
+		 	'link': 'timecap.html'
+		},
 
 		{
 			'name': 're-imagined album covers',
@@ -40,7 +55,7 @@ $(document).ready(function(){
 			'name': 'the scent library',
 			'image': 'png/scentlib.png',
 			'height': '600',
-			'width' : '950',
+			'width' : '980',
 			'link': 'scent_lib.html'
 		},
 
@@ -207,6 +222,26 @@ $(document).ready(function(){
 	$('#close').click(function(){
 		$('#myinfo_nav').css({'height':'0%'});
 		$('body').css({'overflow-x': 'visible'});
+	});
+
+	//about me copy email to clipboard 
+	function copyToClipboard() {
+		var copyText = document.getElementById('email_handle');
+		var textArea = document.createElement('textarea');
+		textArea.value = copyText.textContent;
+		document.body.appendChild(textArea);
+		//Select the text field
+  		textArea.select();
+  		textArea.setSelectionRange(0, 99999); //for mobile devices
+
+  		//Copy the text inside the text field
+  		document.execCommand('copy');
+  		textArea.remove();
+  		alert(textArea.value + ' copied to your clipboard!');
+	}
+
+	$('#email_handle').click(function(){
+		copyToClipboard();
 	});
 
 });

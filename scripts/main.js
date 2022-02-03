@@ -12,6 +12,14 @@ $(document).ready(function(){
 		// },
 
 		{
+			'name': 'motion graphics',
+			'image': 'png/mg.png',
+			'height': '500',
+			'width' : '450',
+		 	'link': 'motion.html'
+		},
+
+		{
 			'name': 'the time capsule',
 			'image': 'png/timecap.png',
 			'height': '600',
@@ -60,6 +68,14 @@ $(document).ready(function(){
 		},
 
 		// {
+		// 	'name': 'censorship boardgame',
+		// 	'image': 'png/foc.png',
+		// 	'height': '130',
+		// 	'width' : '350',
+		//  	'link': 'foc.html'
+		// },
+
+		// {
 		// 	'name': 'parasite: venmo',
 		// 	'image': 'png/venmo.png',
 		// 	'height': '200',
@@ -70,7 +86,7 @@ $(document).ready(function(){
 		// },
 
 		{
-			'name': 'gold is boring',
+			'name': 'gold is boring (zine)',
 			'image': 'png/gib.png',
 			'height': '650',
 			'width' : '525',
@@ -102,7 +118,7 @@ $(document).ready(function(){
 		},
 
 		{
-			'name': 'friction museum',
+			'name': 'friction museum logo',
 			'image': 'png/frictionlogo.png',
 			'height': '350',
 			'width' : '650',

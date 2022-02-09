@@ -52,13 +52,13 @@
 			bottom: 7px;
 			left: 20px;
 		}
-		#leftarrow {
+/*		#leftarrow {
 			font-size: 50px;
 			position: fixed;
 			color: black;
 			top: 50%; 
 			right: 100px;
-		}
+		}*/
 		#rightarrow {
 			font-size: 50px;
 			position: fixed;
@@ -91,6 +91,43 @@
 			margin-bottom: 30px;
 			margin-top: 10px;
 		}
+
+		/*code for mobile screens*/
+		@media only screen and (max-width: 700px) {
+			h1 {
+				font-size: 30px;
+				/*margin-top: 10px;*/
+			}
+			h2 {
+				font-size: 22px;
+			}
+			p {
+				margin-top: 20px;
+				font-size: 12px;
+				line-height: 14px;
+			}
+			body {
+				margin: 30px;
+				margin-bottom: 30px;
+			}
+			#home {
+				left: 88%;
+			}
+			#home_text {
+				display: inline;
+				left: 50%;
+				bottom: -5px;
+				z-index: 10;
+			}
+			#rightarrow {
+				font-size: 30px;
+				position: fixed;
+				color: black;
+				top: 94%;
+				left: 20px;
+				z-index: 10;
+			}
+		}	
 	</style>
 
 	<div class="arrows">

@@ -135,53 +135,6 @@ $(document).ready(function(){
 
 	]
 
-	// interactions for the text on first page 
-	// $('#lastname').on('mouseenter', function(){
-	// 	$('#lastname').css({'display': 'none'});
-	// 	$('#chinesename').css({'display': 'inline'});
-	// 	$('#name_pronounce').css({'display': 'inline'});
-	// });
-	// $('#lastname').on('mouseleave', function(){
-	// 	$('#lastname').css({'display': 'inline'});
-	// 	$('#chinesename').css({'display': 'none'});
-	// 	$('#name_pronounce').css({'display': 'none'});
-	// });
-
-	// $('#firstname').data('clicked', false).click(function(){
-	// 	$('#mobile_hint').css({'display': 'none'});
-	// 	$(this).data('clicked', true);
-	// 	$('#corner_text').fadeIn();
-	// 	if($('#firstname').data('clicked') === false) {
-	// 		// $('#firstname').fadeOut();
-	// 		$('#corner_text').fadeIn();
-	// 		//$('#chinesename').css({'display': 'inline'});
-	// 		// $('#lastname').css({'display': 'none'});
-	// 	} else {
-	// 		$('#firstname').hover(function(){
-	// 			$('#firstname').css({'animation': 'none', 'color': 'black', 'cursor': 'default'});
-	// 		});
-	// 	}
-	// });
-
-	// $('#portfolio').on('mouseenter', function(){
-	// 	$('#hint').css({'display': 'inline'});
-	// });
-	// $('#portfolio').on('mouseleave', function(){
-	// 	$('#hint').css({'display': 'none'});
-	// });
-	// $('#portfolio').click(function(){
-	// 	console.log('there it is! when u scroll left, u can see all my works so far in lil pngs! now why not try clicking on each of them?');
-	// 	$('#introtext').fadeOut();
-	// 	$('#intro_png').fadeOut();
-	// 	$('#png_box').css({'display': 'flex'});
-	// 	$('#mobile_hint').css({'display': 'none'});
-	// 	if($('#firstname').data('clicked') === true) {
-	// 		$('body').css({'background-color': 'white'});
-	// 	} else {
-	// 		$('#corner_text').fadeIn();
-	// 	}
-	// });
-
 	function originalpng (pngset) {
 			for(i=0; i<pngset.length; i++){
 		var pngDiv = $('<div/>', {'class': 'pngdiv'})
@@ -259,5 +212,25 @@ $(document).ready(function(){
 	$('#email_handle').click(function(){
 		copyToClipboard();
 	});
+
+	//for the mobile collapsible 
+	$(window).resize(function(){location.reload();});
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	console.log(coll)
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.display === "block") {
+	      content.style.display = "none";
+	    } else {
+	      content.style.display = "block";
+	    }
+	  });
+	}
+
 
 });

@@ -45,6 +45,9 @@
 		.arrows {
 			cursor: pointer;
 		}
+		#mobile_home_text {
+			display: none;
+		}
 		#home {
 			font-size: 30px;
 			position: fixed;
@@ -146,6 +149,69 @@
 			top: 680px;
 			left: 120px;
 		}
+
+		/*code for mobile screens*/
+		@media only screen and (max-width: 700px) {
+			h1 {
+				font-size: 30px;
+				/*margin-top: 10px;*/
+			}
+			h2 {
+				font-size: 22px;
+			}
+			p {
+				margin-top: 20px;
+				font-size: 12px;
+				line-height: 14px;
+			}
+			body {
+				margin: 30px;
+				margin-bottom: 0px;
+			}
+			#home_text {
+				display: none;
+			}
+			#home {
+			display: none;
+			}
+			#mobile_home_text {
+				display: inline;
+				position: fixed;
+				left: 43%;
+				top: 92.4%;
+				color: rgb(0,0,255);
+				z-index: 10;
+			}
+			#home_link {
+				text-decoration: none;
+				color: rgb(0,0,255);;
+			}
+			#leftarrow {
+				font-size: 30px;
+				position: fixed;
+				color: black;
+				top: 94%;
+				right: 20px;
+				z-index: 10;
+			}
+			#rightarrow {
+				font-size: 30px;
+				position: fixed;
+				color: black;
+				top: 94%;
+				left: 20px;
+				z-index: 10;
+			}
+			img {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+			margin-top: 10px;
+			}
+			#emoji1, #emoji2, #emoji3, #emoji4, #emoji5, #emoji6, #emoji7, #emoji8, #emoji9 {
+				display: none;
+			}
+		}
 	</style>
 
 	<div class="arrows">
@@ -181,6 +247,10 @@
 	<div id="emoji7">👀</div>
 	<div id="emoji8">👀</div>
 	<div id="emoji9">👀</div>
+
+	<div id="mobile_home_text">
+		<h2><a id="home_link" href="index.html">home</a></h2>
+	</div>
 
 </body>
 </html>

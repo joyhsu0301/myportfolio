@@ -51,6 +51,7 @@
 			color: rgb(0,0,255);
 			bottom: 7px;
 			left: 20px;
+			z-index: 10;
 		}
 		#leftarrow {
 			font-size: 60px;
@@ -85,17 +86,49 @@
 			top: 55%;
 			left: 100px;
 		}*/
-		#container {
+/*		#container {
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: row;
-		}
-		img {
+		}*/
+/*		img {
 			max-width: 100%;
 			height: auto;
 			margin-bottom: 30px;
 			margin-top: 10px;
-		}
+		}*/
+
+		/*code for mobile screens*/
+		@media only screen and (max-width: 700px) {
+			h1 {
+				font-size: 30px;
+				/*margin-top: 10px;*/
+			}
+			h2 {
+				font-size: 22px;
+			}
+			p {
+				margin-top: 20px;
+				font-size: 12px;
+				line-height: 14px;
+			}
+			body {
+				margin: 30px;
+				margin-bottom: 60px;
+			}
+			#home_text {
+				display: inline;
+				z-index: 10;
+			}
+			#leftarrow {
+				font-size: 30px;
+				position: fixed;
+				color: black;
+				top: 94%;
+				right: 20px;
+				z-index: 10;
+			}
+		}	
 	</style>
 
 	<div class="arrows">

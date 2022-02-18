@@ -214,7 +214,6 @@ $(document).ready(function(){
 	});
 
 	//for the mobile collapsible 
-	$(window).resize(function(){location.reload();});
 	var coll = document.getElementsByClassName("collapsible");
 	var i;
 

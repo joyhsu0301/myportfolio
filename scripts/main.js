@@ -10,6 +10,13 @@ $(document).ready(function(){
 		// 	'width' : '200',
 		//  	'link': 'covers.html'
 		// },
+		{
+			'name': 'thesis project',
+			'image': 'png/0900.png',
+			'height': 'auto',
+			'width' : '375',
+		 	'link': 'thesis.html'
+		},
 
 		{
 			'name': 'motion graphics',

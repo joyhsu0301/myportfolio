@@ -12,9 +12,9 @@ $(document).ready(function(){
 		// },
 		{
 			'name': 'thesis project',
-			'image': 'png/0900.png',
+			'image': 'png/thesis.png',
 			'height': 'auto',
-			'width' : '375',
+			'width' : '400',
 		 	'link': 'thesis.html'
 		},
 

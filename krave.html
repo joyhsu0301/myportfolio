@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Joy Hsu: KraveBeauty</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="scripts/side.js" type="text/javascript"></script>
+	<link rel="icon" href="smiley.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+</head>
+<body>
+	
+	<style type="text/css">
+		@font-face {
+			font-family: 'spacegroteskbold';
+			src: url('font/spacegrotesk_bold.woff') format('woff');
+		}
+		@font-face {
+			font-family: 'spacegroteskregular';
+			src: url('font/spacegrotesk_regular.woff') format('woff');
+		}
+		h1 {
+			font-family: 'spacegroteskbold', sans-serif;
+			font-size: 40px;
+			color: black;
+		}
+		h2 {
+			font-family: 'spacegroteskbold', sans-serif;
+			font-size: 25px;
+			line-height: 26px;
+		}
+		p {
+			font-family: 'spacegroteskregular', sans-serif;
+			line-height: 30px;
+			font-size: 22px;
+			margin-top: 50px; 
+		}
+		body {
+			margin: 50px;
+			margin-right: 250px;
+			margin-left: 250px;
+			background-color: white;
+			overflow-x: hidden;
+			cursor: default;
+		}
+		.arrows {
+			cursor: pointer;
+		}
+		#home {
+			font-size: 30px;
+			position: fixed;
+			color: rgb(0,0,255);
+			bottom: 7px;
+			left: 20px;
+			z-index: 10;
+		}
+		#leftarrow {
+			font-size: 60px;
+			position: fixed;
+			color: black;
+			top: 50%; 
+			right: 100px;
+		}
+/*		#rightarrow {
+			font-size: 50px;
+			position: fixed;
+			color: black;
+			top: 50%;
+			left: 100px;
+		}*/
+		#home_text {
+			display: none;
+			position: fixed;
+			left: 60px;
+			bottom: 0px;
+			color: rgb(0,0,255);
+		}
+		#next_text {
+			display: none;
+			position: fixed;
+			top: 55%;
+			right: 80px;
+		}
+/*		#before_text {
+			display: none;
+			position: fixed;
+			top: 55%;
+			left: 100px;
+		}*/
+		#container {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.fullsize {
+			max-width: 100%;
+			height: auto;
+		}
+
+		img {
+			max-width: 49%;
+			height: auto;
+			margin-bottom: 10px;
+			margin-top: 10px;
+		}
+
+		/*code for mobile screens*/
+		@media only screen and (max-width: 700px) {
+			h1 {
+				font-size: 30px;
+				/*margin-top: 10px;*/
+			}
+			h2 {
+				font-size: 22px;
+			}
+			p {
+				margin-top: 20px;
+				font-size: 12px;
+				line-height: 14px;
+			}
+			body {
+				margin: 30px;
+				margin-bottom: 60px;
+			}
+			#home_text {
+				display: inline;
+				z-index: 10;
+			}
+			#leftarrow {
+				font-size: 30px;
+				position: fixed;
+				color: black;
+				top: 94%;
+				right: 20px;
+				z-index: 10;
+			}
+		}	
+	</style>
+
+	<div class="arrows">
+<!-- 		<a href=""><div id="rightarrow">&#8592;</div></a> -->
+		<a href="scent_lib.html"><div id="leftarrow">&#8594;</div></a>
+		<a href="index.html"><div id="home">&#8617;</div></a>
+	</div>
+
+	<div id="home_text">
+		<h2>back to home</h2>
+	</div>
+
+	<div id="next_text">
+		<h2>scent <br>library</h2>
+	</div>
+
+<!-- 	<div id="before_text">
+		<h2>_____</h2>
+	</div> -->
+
+	<h1 align="center">KraveBeauty</h1>
+	<p>At Kravebeauty, a start-up skincare company, I worked on creating social media assets as well as marketing campaigns for new products. I gave creative direction for many of the social media compaigns; some of which involved coming up with concepts and giving directions for product photoshoots. I not only worked on design projects, but also dabbled with photography, stop motion, and illustration. Scroll down to see some of the work I've done! All the designs, photos, motion, and illustrations have been made by me.</p>
+
+	<div id="container">
+		<img src="images/kb2.gif">
+		<img src="images/kb6.png">
+		<img src="images/kb9.png">
+		<img src="images/kb8.gif">
+		<img src="images/kb4.png">
+		<img src="images/kb5.png">
+		<img class="fullsize" src="images/kb1.png">
+		<img src="images/kb3.png">
+		<img src="images/kb7.png">
+	</div>
+
+</body>
+</html>

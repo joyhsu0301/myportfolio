@@ -11,12 +11,21 @@ $(document).ready(function(){
 		//  	'link': 'covers.html'
 		// },
 		{
-			'name': 'thesis project',
-			'image': 'png/thesis.png',
+			'name': 'kravebeauty',
+			'image': 'png/krave.png',
 			'height': 'auto',
 			'width' : '400',
-		 	'link': 'thesis.html'
+		 	'link': 'krave.html'
 		},
+
+		{
+			'name': 'the scent library',
+			'image': 'png/scentlib.png',
+			'height': '600',
+			'width' : '980',
+			'link': 'scent_lib.html'
+		},
+
 
 		{
 			'name': 'motion graphics',
@@ -67,12 +76,13 @@ $(document).ready(function(){
 		},
 
 		{
-			'name': 'the scent library',
-			'image': 'png/scentlib.png',
-			'height': '600',
-			'width' : '980',
-			'link': 'scent_lib.html'
+			'name': 'thesis project',
+			'image': 'png/thesis.png',
+			'height': 'auto',
+			'width' : '400',
+		 	'link': 'thesis.html'
 		},
+
 
 		// {
 		// 	'name': 'censorship boardgame',
@@ -94,9 +104,9 @@ $(document).ready(function(){
 
 		{
 			'name': 'gold is boring (zine)',
-			'image': 'png/gib.png',
-			'height': '650',
-			'width' : '525',
+			'image': 'png/drops.png',
+			'height': '350',
+			'width' : 'auto',
 			'link': 'gib.html'
 		}, 
 

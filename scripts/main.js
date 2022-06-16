@@ -35,13 +35,13 @@ $(document).ready(function(){
 		 	'link': 'motion.html'
 		},
 
-		{
-			'name': 'the time capsule',
-			'image': 'png/timecap.png',
-			'height': '600',
-			'width' : '980',
-		 	'link': 'timecap.html'
-		},
+		// {
+		// 	'name': 'the time capsule',
+		// 	'image': 'png/timecap.png',
+		// 	'height': '600',
+		// 	'width' : '980',
+		//  	'link': 'timecap.html'
+		// },
 
 		{
 			'name': 're-imagined album covers',
@@ -108,7 +108,7 @@ $(document).ready(function(){
 			'height': '350',
 			'width' : 'auto',
 			'link': 'gib.html'
-		}, 
+		}
 
 		// {
 		// 	'name': 'french cuisine wikibook',
@@ -118,37 +118,37 @@ $(document).ready(function(){
 		// 	'link': 'wiki.html'
 		// },
 
-		{
-			'name': 'bembo type poster',
-			'image': 'png/bembo.png',
-			'height': '400',
-			'width' : '300',
-			'link': 'bembo.html'
-		}, 
+		// {
+		// 	'name': 'bembo type poster',
+		// 	'image': 'png/bembo.png',
+		// 	'height': '400',
+		// 	'width' : '300',
+		// 	'link': 'bembo.html'
+		// }, 
 
-		{
-			'name': 'vignelli zine',
-			'image': 'png/massimo.png',
-			'height': '650',
-			'width' : '500',
-			'link': 'vignelli.html'
-		},
+		// {
+		// 	'name': 'vignelli zine',
+		// 	'image': 'png/massimo.png',
+		// 	'height': '650',
+		// 	'width' : '500',
+		// 	'link': 'vignelli.html'
+		// },
 
-		{
-			'name': 'friction museum logo',
-			'image': 'png/frictionlogo.png',
-			'height': '350',
-			'width' : '650',
-			'link': 'friction.html'
-		}, 
+		// {
+		// 	'name': 'friction museum logo',
+		// 	'image': 'png/frictionlogo.png',
+		// 	'height': '350',
+		// 	'width' : '650',
+		// 	'link': 'friction.html'
+		// }, 
 
-		{
-			'name': 'richard serra postcard',
-			'image': 'png/postcard.png',
-			'height': '540',
-			'width' : '830',
-			'link': 'postcard.html'
-		}
+		// {
+		// 	'name': 'richard serra postcard',
+		// 	'image': 'png/postcard.png',
+		// 	'height': '540',
+		// 	'width' : '830',
+		// 	'link': 'postcard.html'
+		// }
 
 	]
 

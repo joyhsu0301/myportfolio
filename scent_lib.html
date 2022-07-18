@@ -32,7 +32,7 @@
 			font-family: 'spacegroteskregular', sans-serif;
 			line-height: 30px;
 			font-size: 22px;
-			margin-top: 50px; 
+			margin-top: 30px; 
 		}
 		body {
 			margin: 50px;
@@ -58,14 +58,14 @@
 		#leftarrow {
 			font-size: 50px;
 			position: fixed;
-			color: black;
+			color: blue;
 			top: 50%; 
 			right: 100px;
 		}
 		#rightarrow {
 			font-size: 50px;
 			position: fixed;
-			color: black;
+			color: blue;
 			top: 50%; 
 			left: 100px;
 		}
@@ -80,13 +80,15 @@
 			display: none;
 			position: fixed;
 			top: 55%;
-			right: 80px;
+			right: 50px;
+			color: blue;
 		}
 		#before_text {
 			display: none;
 			position: fixed;
 			top: 55%;
 			left: 100px;
+			color: blue;
 		}
 
 		img {
@@ -94,6 +96,26 @@
 			height: auto;
 			margin-bottom: 0px;
 			margin-top: 20px;
+		}
+
+
+		/*code for categories under title*/
+		#info {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0px;
+		}
+		.categories {
+			font-family: 'spacegroteskbold', sans-serif;
+			font-size: 15px;
+			border-radius: 10px;
+			background-color: white;
+			color: grey;
+			border: 2px solid grey;
+			margin-right: 10px;
 		}
 
 		/*code for mobile screens*/
@@ -175,7 +197,11 @@
 		<h2>krave<br>beauty</h2>
 	</div>
 
-	<h1 align="center">the scent library</h1>
+	<h1 align="center" style="margin: 5px">the scent library</h1>
+	<div id="info">
+		<button class="categories">Front-End Coding</button>
+		<button class="categories">Web Design</button>
+	</div>
 	<p>For a final project, we were tasked with creating a website which somehow presented a collection of objects using JSON objects. This project was coded using HTML, CSS, and JQuery via Sublime Text.<br><br>Mimicking an online retail experience, I decided to create a website containing a collection of scents familiar or interesting to me. I wanted to translate my experiences of and memories associated with these scents into an interactive webpage everyone can play around with. Everytime you refresh the page, three random scents appear.<br><br> Making this project was very much an iterative process, starting with sketching a very rough wireframe that I loosely followed. I looked at various perfume retail websites to gain inspiration for how they represented smell visually. I chose to have each image pop up randomly on the page after each click to mimic the idea of scent particles being sprayed out. <a href="https://joyhsu0301.github.io/core-lab/final/index.html" target="_blank" class="links">Click here</a> to go to the website! </p>
 
 	<img src="images/scentlib3.png">

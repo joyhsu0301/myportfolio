@@ -32,7 +32,7 @@
 			font-family: 'spacegroteskregular', sans-serif;
 			line-height: 30px;
 			font-size: 22px;
-			margin-top: 50px; 
+			margin-top: 30px; 
 		}
 		body {
 			margin: 50px;
@@ -58,14 +58,14 @@
 		#leftarrow {
 			font-size: 60px;
 			position: fixed;
-			color: black;
+			color: blue;
 			top: 50%; 
 			right: 100px;
 		}
 		#rightarrow {
 			font-size: 50px;
 			position: fixed;
-			color: black;
+			color: blue;
 			top: 50%;
 			left: 100px;
 		}
@@ -81,18 +81,39 @@
 			position: fixed;
 			top: 55%;
 			right: 70px;
+			color: blue;
 		}
 		#before_text {
 			display: none;
 			position: fixed;
 			top: 55%;
 			left: 100px;
+			color: blue;
 		}
 		img {
 			max-width: 100%;
 			height: auto;
 			margin-bottom: 30px;
 			margin-top: 10px;
+		}
+
+		/*code for categories under title*/
+		#info {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0px;
+		}
+		.categories {
+			font-family: 'spacegroteskbold', sans-serif;
+			font-size: 15px;
+			border-radius: 10px;
+			background-color: white;
+			color: grey;
+			border: 2px solid grey;
+			margin-right: 10px;
 		}
 
 		/*code for mobile screens*/
@@ -174,7 +195,11 @@
 		<h2>liminal: an <br> animated <br> short</h2>
 	</div>
 
-	<h1 align="center">the ordinary things: a publication</h1>
+	<h1 align="center" style="margin: 5px">the ordinary things: a publication</h1>
+	<div id="info">
+		<button class="categories">Brand Identity</button>
+		<button class="categories">Editorial</button>
+	</div>
 	<p>The Ordinary Things is an imagined publication for college students who go schools without a campus. It aims to show readers how to appreciate the beauty in ordinary things. All images used in this first issue were submissions from readers in order to add <br> a sense of community into the publication. <br><br> Content is taken from readers themselves, various articles, and web forum answers discussing how they deal with mundanity. The publication primarily exists online (through the website), and readers can decide to print the issues out at home. Each issue comes in 3 different sizes (small, medium, large) and are all bound differently.<br> Applications Used: Adobe Photoshop, Adobe Indesign, Figma</p>
 
 	<img src="images/tot.jpg" style="margin-bottom: -5px;">

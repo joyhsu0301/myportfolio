@@ -32,7 +32,7 @@
 			font-family: 'spacegroteskregular', sans-serif;
 			line-height: 30px;
 			font-size: 22px;
-			margin-top: 50px; 
+			margin-top: 30px; 
 		}
 		body {
 			margin: 50px;
@@ -58,14 +58,14 @@
 		#leftarrow {
 			font-size: 50px;
 			position: fixed;
-			color: black;
+			color: blue;
 			top: 50%; 
 			right: 100px;
 		}
 		#rightarrow {
 			font-size: 50px;
 			position: fixed;
-			color: black;
+			color: blue;
 			top: 50%; 
 			left: 100px;
 		}
@@ -81,18 +81,39 @@
 			position: fixed;
 			top: 55%;
 			right: 80px;
+			color: blue;
 		}
 		#before_text {
 			display: none;
 			position: fixed;
 			top: 55%;
 			left: 100px;
+			color: blue;
 		}
 		img {
 			max-width: 100%;
 			height: auto;
 			margin-bottom: 30px;
 			margin-top: 10px;
+		}
+
+		/*code for categories under title*/
+		#info {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0px;
+		}
+		.categories {
+			font-family: 'spacegroteskbold', sans-serif;
+			font-size: 15px;
+			border-radius: 10px;
+			background-color: white;
+			color: grey;
+			border: 2px solid grey;
+			margin-right: 10px;
 		}
 
 		/*code for mobile screens*/
@@ -174,7 +195,11 @@
 		<h2>thesis <br>project</h2>
 	</div>
 
-	<h1 align="center">gold is boring</h1>
+	<h1 align="center" style="margin: 5px;">gold is boring</h1>
+	<div id="info">
+		<button class="categories">Brand Identity</button>
+		<button class="categories">Editorial</button>
+	</div>
 	<p>We were given an open-ended class assignment where we had the freedom to choose our own content and curate them into a designed booklet of some sort.
 	<br>
 	<br>

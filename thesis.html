@@ -32,7 +32,7 @@
 			font-family: 'spacegroteskregular', sans-serif;
 			line-height: 30px;
 			font-size: 22px;
-			margin-top: 50px; 
+			margin-top: 30px; 
 		}
 		body {
 			margin: 50px;
@@ -56,14 +56,14 @@
 		#leftarrow {
 			font-size: 60px;
 			position: fixed;
-			color: black;
+			color: blue;
 			top: 50%; 
 			right: 100px;
 		}
 		#rightarrow {
 			font-size: 50px;
 			position: fixed;
-			color: black;
+			color: blue;
 			top: 50%;
 			left: 100px;
 		}
@@ -79,12 +79,14 @@
 			position: fixed;
 			top: 55%;
 			right: 80px;
+			color: blue;
 		}
 		#before_text {
 			display: none;
 			position: fixed;
 			top: 55%;
 			left: 100px;
+			color: blue;
 		}
 /*		#container {
 			display: flex;
@@ -96,6 +98,25 @@
 			height: auto;
 			margin-bottom: 30px;
 			margin-top: 10px;
+		}
+
+		/*code for categories under title*/
+		#info {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0px;
+		}
+		.categories {
+			font-family: 'spacegroteskbold', sans-serif;
+			font-size: 15px;
+			border-radius: 10px;
+			background-color: white;
+			color: grey;
+			border: 2px solid grey;
+			margin-right: 10px;
 		}
 
 		/*code for mobile screens*/
@@ -149,7 +170,11 @@
 		<h2>my<br>portfolio</h2>
 	</div>
 
-	<h1 align="center">1 Day</h1>
+	<h1 align="center" style="margin: 5px;">1 Day</h1>
+	<div id="info">
+		<button class="categories">Brand Identity</button>
+		<button class="categories">Editorial</button>
+	</div>
 	<p>In this project, I wanted to challenge the edited version of ourselves we present to others. Is what we deem unnecessary information truly unnecessary? What is our relationship to privacy? This body of work meticulously documents the boring, overlooked, and seemingly unimportant moments in our day-to-day experience. 
 
 	<br><br>So much of our lived experience is mediated through the screen. Everything we view online seems like a never-ending stream of information that is perpetually seeking our attention. This inflates the value we place on efficiency and time, making us hyper-aware of the pace at which we live. 

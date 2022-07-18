@@ -32,7 +32,7 @@
 			font-family: 'spacegroteskregular', sans-serif;
 			line-height: 30px;
 			font-size: 22px;
-			margin-top: 50px; 
+			margin-top: 30px; 
 		}
 		body {
 			margin: 50px;
@@ -56,14 +56,14 @@
 		#leftarrow {
 			font-size: 60px;
 			position: fixed;
-			color: black;
+			color: blue;
 			top: 50%; 
 			right: 100px;
 		}
 		#rightarrow {
 			font-size: 50px;
 			position: fixed;
-			color: black;
+			color: blue;
 			top: 50%;
 			left: 100px;
 		}
@@ -79,12 +79,14 @@
 			position: fixed;
 			top: 55%;
 			right: 90px;
+			color: blue;
 		}
 		#before_text {
 			display: none;
 			position: fixed;
 			top: 55%;
 			left: 100px;
+			color: blue;
 		}
 		#container {
 			display: flex;
@@ -96,6 +98,25 @@
 			height: auto;
 			margin-bottom: 30px;
 			margin-top: 10px;
+		}
+
+		/*code for categories under title*/
+		#info {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0px;
+		}
+		.categories {
+			font-family: 'spacegroteskbold', sans-serif;
+			font-size: 15px;
+			border-radius: 10px;
+			background-color: white;
+			color: grey;
+			border: 2px solid grey;
+			margin-right: 10px;
 		}
 
 		/*code for mobile screens*/
@@ -149,7 +170,11 @@
 		<h2>scent<br>library</h2>
 	</div>
 
-	<h1 align="center">motion graphics</h1>
+	<h1 align="center" style="margin: 5px">motion graphics</h1>
+	<div id="info">
+		<button class="categories">Motion Graphics</button>
+		<button class="categories">Stop Motion</button>
+	</div>
 	<p>Below is a collection of short motion graphics I created, each with different themes and purposes. These videos all explore ways to visualize abstract or non-physical presences. 
 	<br><br>
 	"Daydream" is a video about how creativity is often born out of boredom. Personally, when I find myself doing mundane day-to-day tasks, I often catch myself daydreaming and coming up with ideas for creative and personal projects. Using a cmbination of digital footage and stop-motion animation, I wanted to create a juxtaposing reality that induces a sense of wonder. 

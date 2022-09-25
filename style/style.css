@@ -6,6 +6,10 @@
 	font-family: 'spacegroteskregular';
 	src: url('../font/spacegrotesk_regular.woff') format('woff');
 }
+@font-face {
+	font-family: 'spacegroteskregular';
+	src: url('../font/spacegrotesk_regular.woff') format('woff');
+}
 /*@keyframes jiggle {
 	0% {transform: rotate(0deg);}
 	50% {transform: rotate(3deg);}
@@ -47,7 +51,7 @@ h1 {
 /*sliding box with pngs of all works*/
 #png_box {
 	position: absolute;
-	top: -60px;
+	height: 90%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -56,7 +60,7 @@ h1 {
 	z-index: 5;
 }
 .pngdiv {
-	margin: 50px;
+	margin: 40px;
 	padding: 10px;
 	z-index: 5;
 }
@@ -66,7 +70,7 @@ h1 {
 	padding: 10px;
 }
 
-/*J O Y in the corners*/
+/*Joy in the corners*/
 #corner_text {
 	font-family: 'spacegroteskbold', sans-serif;
 	font-size: 40px;
@@ -74,22 +78,58 @@ h1 {
 	display: inline;
 	z-index: 20;
 }
-#my_name {
+#scrollarrow {
 	cursor: default;
+	position: fixed;
+	color: blue;
+	bottom: 10px;
+	left: 39%;
+}
+#aboutme {
+	cursor: pointer;
 	position: fixed;
 	bottom: 10px;
 	left: 20px;
 	z-index: 20;
 }
-#aboutme {
+#hidden_back {
+	cursor: pointer;
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+	color: blue;
+	z-index: 50;
+}
+#sortby {
 	cursor: pointer;
 	position: fixed;
 	bottom: 10px;
 	right: 20px;
 	z-index: 20;
 }
-#aboutme:hover {
+#aboutme:hover, #sortby:hover {
 	color: rgb(0,0,255);
+}
+#catdisplay {
+	position: fixed;
+	bottom: 16px;
+	left: 20px;
+	cursor: pointer;
+	z-index: 20;
+}
+.catbox {
+	border: 2px solid blue;
+	color: blue;
+	background-color: white;
+	font-family: 'spacegroteskbold';
+	font-size: 22px;
+	border-radius: 13px;
+	cursor: pointer;
+	z-index: 20;
+}
+
+.catbox:hover {
+	background-color: blue;
 }
 
 /*my info navigation bar*/
@@ -141,7 +181,7 @@ h1 {
 }
 /*hiding mobile stuff
 */
-button, .content {
+.collapsible, .content {
 	display: none;
 }
 
@@ -270,6 +310,9 @@ button, .content {
 		}*/
 }
 
+.hide {
+	display:  none;
+}
 
 
 

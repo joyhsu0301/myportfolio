@@ -10,12 +10,25 @@ $(document).ready(function(){
 		// 	'width' : '200',
 		//  	'link': 'covers.html'
 		// },
+
+		{
+			'name': 'angelika',
+			'image': 'png/angelika.png',
+			'height': '500',
+			'width' : 'auto',
+		 	'link': 'angelika.html',
+		 	'cat': 'brandIdentity,socialMediaDesign'
+
+		},
+
 		{
 			'name': 'kravebeauty',
 			'image': 'png/krave.png',
 			'height': 'auto',
 			'width' : '400',
-		 	'link': 'krave.html'
+		 	'link': 'krave.html',
+		 	'cat': 'brandIdentity,socialMediaDesign'
+
 		},
 
 		{
@@ -23,7 +36,8 @@ $(document).ready(function(){
 			'image': 'png/scentlib.png',
 			'height': '600',
 			'width' : '980',
-			'link': 'scent_lib.html'
+			'link': 'scent_lib.html',
+			'cat': 'frontEndCoding,webDesign'
 		},
 
 
@@ -32,7 +46,8 @@ $(document).ready(function(){
 			'image': 'png/mg.png',
 			'height': '500',
 			'width' : '450',
-		 	'link': 'motion.html'
+		 	'link': 'motion.html',
+		 	'cat': 'stopMotion'
 		},
 
 		// {
@@ -48,7 +63,8 @@ $(document).ready(function(){
 			'image': 'png/ac.png',
 			'height': '420',
 			'width' : '520',
-		 	'link': 'covers.html'
+		 	'link': 'covers.html',
+		 	'cat': 'brandIdentity,illustration'
 		},
 
 		{
@@ -56,7 +72,8 @@ $(document).ready(function(){
 			'image': 'png/goo.png',
 			'height': '400',
 			'width' : '400',
-		 	'link': 'goo.html'
+		 	'link': 'goo.html',
+		 	'cat': 'animation'
 		},
 
 		{
@@ -64,7 +81,8 @@ $(document).ready(function(){
 			'image': 'png/tot.png',
 			'height': '300',
 			'width' : '450',
-			'link': 'tot.html'
+			'link': 'tot.html',
+			'cat': 'brandIdentity,editorial'
 		},
 
 		{
@@ -72,7 +90,8 @@ $(document).ready(function(){
 			'image': 'smiley.png',
 			'height': '150',
 			'width' : '160',
-			'link': 'this_website.html'
+			'link': 'this_website.html',
+			'cat': 'brandIdentity,webDesign,frontEndCoding'
 		},
 
 		{
@@ -80,7 +99,8 @@ $(document).ready(function(){
 			'image': 'png/thesis.png',
 			'height': 'auto',
 			'width' : '400',
-		 	'link': 'thesis.html'
+		 	'link': 'thesis.html',
+		 	'cat': 'brandIdentity,editorial'
 		},
 
 
@@ -107,7 +127,8 @@ $(document).ready(function(){
 			'image': 'png/drops.png',
 			'height': '350',
 			'width' : 'auto',
-			'link': 'gib.html'
+			'link': 'gib.html',
+			'cat': 'brandIdentity,editorial'
 		}
 
 		// {
@@ -153,10 +174,10 @@ $(document).ready(function(){
 	]
 
 	function originalpng (pngset) {
-			for(i=0; i<pngset.length; i++){
+		for(i=0; i<pngset.length; i++){
 		var pngDiv = $('<div/>', {'class': 'pngdiv'})
 		.data('png', pngset[i])
-		.append('<img class="ondisplay" src="'+pngset[i].image+'" style="width: '+pngset[i].width+'px; height: '+pngset[i].height+'px;">')
+		.append('<img class="ondisplay" data-cat="'+pngset[i].cat+'" src="'+pngset[i].image+'" style="width: '+pngset[i].width+'px; height: '+pngset[i].height+'px;">')
 		.on('mouseenter', function(){
 			$('#tail').css({'display': 'inline'})
 			.empty()
@@ -176,14 +197,22 @@ $(document).ready(function(){
 	// appending og display list of my portfolio
 	originalpng(pngset);
 
-	$('#goback').click(function(){
-		$('#png_box').empty();
-		originalpng(pngset);
+	$('#hidden_back').click(function(){
+
+		let pngs = document.getElementsByClassName('pngdiv');
+
+		for (let i=0; i< pngs.length;i++) {
+			pngs[i].classList.remove('hide');
+		}
+
 		$('#png_box').css({'top': '0px'});
-		$('#goback').fadeOut();
 		$('#corner_text').fadeIn();
 		$('body').css({'background-color': 'white', 'transition': 'all 0.5s linear'});
 		$('#background').css({'display': 'inline', 'transition': 'all 0.5s linear'});
+		$('#catdisplay').toggle(reset);
+		$('#sortby').slideToggle(600);
+		$('#aboutme').slideToggle(600);
+		$('#hidden_back').slideToggle(600);
 	});
 
 	// name of each project follows cursor on hover
@@ -196,10 +225,10 @@ $(document).ready(function(){
 
 	//corner text interactions 
 	$('#aboutme').on('mouseenter', function(){
-		$('#aboutme').empty().append('click me');
+		$('#aboutme').empty().append('About Me');
 	});
 	$('#aboutme').on('mouseleave', function(){
-		$('#aboutme').empty().append('about me');
+		$('#aboutme').empty().append('Joy Hsu');
 	});
 	$('#aboutme').click(function(){
 		$('#myinfo_nav').css({'height':'100%'});
@@ -209,6 +238,95 @@ $(document).ready(function(){
 		$('#myinfo_nav').css({'height':'0%'});
 		$('body').css({'overflow-x': 'visible'});
 	});
+	$('#sortby').click(function(){
+		$('#scrollarrow').slideToggle(600);
+		$('#catdisplay').toggle(reset);
+		$('#aboutme').slideToggle(600);
+		$('#sortby').slideToggle(600);
+		$('#hidden_back').slideToggle(600);
+	});
+	$('#hidden_back').click(function(){
+		$('#scrollarrow').slideToggle(600);
+	});
+
+	function reset() {
+		$('#catdisplay').children().each(function(){
+			$(this).css({'background-color': 'white', 'color': 'blue'})
+		});
+	}
+
+	$('.catbox').click(function(){
+
+		let category = $(this).data('cat');
+		let pngs = document.getElementsByClassName('pngdiv');
+
+		for (let i=0; i< pngs.length;i++) {
+			let str = pngs[i].firstChild.dataset.cat;
+			if (str.indexOf(',') > -1) {
+				let arr = str.split(',');
+				for (let j=0; j<arr.length;j++) {
+					if (arr[j] == category) {
+						pngs[i].classList.remove('hide');
+						break;
+					} else {
+						pngs[i].classList.add('hide');
+					}
+				}
+			} else {
+				if (str == category) {
+					pngs[i].classList.remove('hide');
+				} else {
+					pngs[i].classList.add('hide');
+				}
+			}
+		}
+
+		// console.log($(this).html());
+		// $("#png_box").children().each(function()
+
+		// let t1 = document.getElementsByClassName('pngdiv');
+
+		// 	for (let j=0;j<t1.length;j++){
+
+		// 	console.log($(this).data('cat'));
+		// 	//If the png contains multiple categories
+		// 	if ($(this).data('cat').indexOf(',') >= 0) {
+		// 		let arr = $(this).data('cat').split(',');
+		// 		for (let i=0;i<arr.length;i++) {
+		// 			if (arr[i] == temp) {
+		// 				//show
+		// 				$(this).hide();
+		// 			} else {
+		// 				//hide
+		// 				$(this).show();
+		// 			}
+		// 		}
+		// 	//if it contains only 1
+		// 	} else {
+		// 		if ($(this).data('cat') == temp) {
+		// 			//show
+		// 			$(this).hide();
+		// 		} else {
+		// 			//hide
+		// 			$(this).show();
+		// 		}
+		// 	}
+ 	// 	});
+		$('#catdisplay').children().each(function(){
+			$(this).css({'background-color': 'white', 'color': 'blue'})
+		})
+		$(this).css({'background-color': 'blue', 'color': 'white'});
+	});
+
+	//on hover animation maybe
+	// $('.catbox').hover(function(){
+	//   $(this).css("font-family": '');
+	//   }, function(){
+	//   $(this).css();
+	// });
+
+	//filter function
+	
 
 	//about me copy email to clipboard 
 	function copyToClipboard() {
@@ -229,6 +347,15 @@ $(document).ready(function(){
 	$('#email_handle').click(function(){
 		copyToClipboard();
 	});
+
+	$(window).bind('scroll', function() {
+     if ($(window).scrollLeft() > 200) {
+         $('#scrollarrow').hide(300);
+     }
+     else {
+         $('#scrollarrow').show(600);
+     }
+});
 
 	//for the mobile collapsible 
 	var coll = document.getElementsByClassName("collapsible");

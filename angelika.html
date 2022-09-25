@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Joy Hsu: Liminal The Animation</title>
+	<title>Joy Hsu: Angelika</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="scripts/side.js" type="text/javascript"></script>
 	<link rel="icon" href="smiley.png">
@@ -45,15 +45,13 @@
 		.arrows {
 			cursor: pointer;
 		}
-		#mobile_home_text {
-			display: none;
-		}
 		#home {
 			font-size: 30px;
 			position: fixed;
 			color: rgb(0,0,255);
 			bottom: 7px;
 			left: 20px;
+			z-index: 10;
 		}
 		#leftarrow {
 			font-size: 60px;
@@ -62,13 +60,13 @@
 			top: 50%; 
 			right: 100px;
 		}
-		#rightarrow {
+/*		#rightarrow {
 			font-size: 60px;
 			position: fixed;
 			color: blue;
 			top: 50%;
 			left: 100px;
-		}
+		}*/
 		#home_text {
 			display: none;
 			position: fixed;
@@ -80,20 +78,31 @@
 			display: none;
 			position: fixed;
 			top: 55%;
-			right: 60px;
+			right: 80px;
 			color: blue;
 		}
-		#before_text {
+/*		#before_text {
 			display: none;
 			position: fixed;
 			top: 55%;
-			left: 80px;
+			left: 100px;
 			color: blue;
+		}*/
+		#container {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
 		}
-		img {
+		.fullsize {
 			max-width: 100%;
 			height: auto;
-			margin-bottom: 30px;
+		}
+
+		img {
+			max-width: 49%;
+			height: auto;
+			margin-bottom: 10px;
 			margin-top: 10px;
 		}
 
@@ -126,7 +135,7 @@
 				font-size: 22px;
 			}
 			p {
-				margin-top: 20px;
+				margin-top: 10px;
 				font-size: 12px;
 				line-height: 14px;
 			}
@@ -135,22 +144,8 @@
 				margin-bottom: 60px;
 			}
 			#home_text {
-				display: none;
-			}
-			#home {
-			display: none;
-			}
-			#mobile_home_text {
 				display: inline;
-				position: fixed;
-				left: 43%;
-				top: 92.4%;
-				color: rgb(0,0,255);
 				z-index: 10;
-			}
-			#home_link {
-				text-decoration: none;
-				color: rgb(0,0,255);;
 			}
 			#leftarrow {
 				font-size: 30px;
@@ -160,28 +155,12 @@
 				right: 20px;
 				z-index: 10;
 			}
-			#rightarrow {
-				font-size: 30px;
-				position: fixed;
-				color: black;
-				top: 94%;
-				left: 20px;
-				z-index: 10;
-			}
-			img {
-			max-width: 100%;
-			height: auto;
-			margin: 0px;
-			}
-			#gap {
-				display: none;
-			}
-		}
+		}	
 	</style>
 
 	<div class="arrows">
-		<a href="covers.html"><div id="rightarrow">&#8592;</div></a>
-		<a href="tot.html"><div id="leftarrow">&#8594;</div></a>
+<!-- 		<a href=""><div id="rightarrow">&#8592;</div></a> -->
+		<a href="krave.html"><div id="leftarrow">&#8594;</div></a>
 		<a href="index.html"><div id="home">&#8617;</div></a>
 	</div>
 
@@ -190,33 +169,29 @@
 	</div>
 
 	<div id="next_text">
-		<h2>the <br> ordinary <br> things </h2>
+		<h2>krave<br>beauty</h2>
 	</div>
 
-	<div id="before_text">
-		<h2>re-imagined <br> album <br> covers</h2>
-	</div>
+<!-- 	<div id="before_text">
+		<h2>_____</h2>
+	</div> -->
 
-	<h1 align="center" style="margin: 5px">liminal: an animated short</h1>
+	<h1 align="center" style="margin: 5px">Angelika</h1>
 	<div id="info">
-		<button class="categories">Animation</button>
+		<button class="categories">Brand Identity</button>
+		<button class="categories">Social Media Design</button>
 	</div>
-	<p>Liminal is an animated short about a girl alone on a subway late night. She starts to notice a weird black substance appearing everywhere; reality as she knows it begins to warp right in front of her eyes. <br><br>This animation was drawn frame-by-frame, and entirely from my trackpad. Yes, my trackpad (a big thank you to the 3-finger drag function, couldn't have done it without you). I came up with the storyline during a time when I had an hour long commute to work through the subway everyday. The emptiness of a subway cart after rush hour always felt like a liminal space to me, and thus this became the inspiration for my animation. <br><br> The storyline for this came to me while I was on the subway, so I quickly jotted it down on my notes app, and then began to storyboard. Afterwards, I created a short animatic, and then the final. A couple changes were made at each step along the way, but I'm happy with how it turned it out in the end and I hope you do too :) <br> Applications Used: Adobe Photoshop, Adobe After Effects</p>
+	<p>As part of my internship at Godfrey Dadich Partners, me and a team of five other interns worked on a 7 week long project aimed to refresh a brand of our choice. We chose to work with Angelika Film Center to help elevate their brand, specifically focusing on social media and advertising. I worked alongside the editorial and strategy team to come up with a holistic brand refresh that included new story franchises, new social media marketing strategies, and a new design system. This was a very fruitful collaborative project that I'm very grateful to have been a part of. For a more detailed look at this project, <a href="https://drive.google.com/file/d/1w7WhFr2ZUjuRyuCtmqmHtItO15hsiYC3/view?usp=sharing">click here</a> to download the presentation.
+	</p>
 
-	<div>
-	  <div style="position: relative; padding-top: 56.25%;">
-	    <iframe src="https://player.vimeo.com/video/491161443" frameborder="0" allowfullscreen
-	      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin-bottom: 30px; margin-top: 10px;"></iframe>
-	  </div>
+	<img class="fullsize" src="images/angelika3.jpg">
+	<div id="container">
+		<img src="images/angelika4.jpg">
+		<img src="images/angelika1.jpg">
+		<img src="images/angelika2.jpg">
+		<img src="images/angelika.png">
 	</div>
-	<div id="gap"><br><br><br></div>
-	<img src="images/pt_1.jpg">
-	<img src="images/pt_2.jpg">
-	<img src="images/pt_3.jpg">
-
-	<div id="mobile_home_text">
-		<h2><a id="home_link" href="index.html">home</a></h2>
-	</div>
+	<img class="fullsize" src="images/angelika5.jpg">
 
 </body>
 </html>

@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-	console.log('dont know where to click? Try clicking on "portfolio" and see what happens!');
 
 	var pngset = [
 		// {
@@ -355,7 +354,9 @@ $(document).ready(function(){
      else {
          $('#scrollarrow').show(600);
      }
-});
+	});
+
+
 
 	//for the mobile collapsible 
 	var coll = document.getElementsByClassName("collapsible");

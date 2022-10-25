@@ -6,6 +6,10 @@
 	<script src="scripts/side.js" type="text/javascript"></script>
 	<link rel="icon" href="smiley.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
+
+	<script type="text/javascript">
+		
+	</script>
 </head>
 <body>
 	
@@ -97,6 +101,18 @@
 			margin-bottom: 0px;
 			margin-top: 20px;
 		}
+		.hiddentext {
+			font-weight: bold;
+			color: blue;
+		}
+
+		.hiddenimg {
+			display: none;
+		}
+
+		.hiddentext:hover ~ .hiddenimg {
+			display: block;
+		}
 
 
 		/*code for categories under title*/
@@ -176,6 +192,12 @@
 			margin-bottom: 20px;
 			margin-top: 10px;
 			}
+			.hiddentext:hover ~ .hiddenimg {
+			display: none;
+			}
+			.hiddentext {
+				color: black;
+			}
 		}
 	</style>
 
@@ -202,7 +224,7 @@
 		<button class="categories">Front-End Coding</button>
 		<button class="categories">Web Design</button>
 	</div>
-	<p>For a final project, we were tasked with creating a website which somehow presented a collection of objects using JSON objects. This project was coded using HTML, CSS, and JQuery via Sublime Text.<br><br>Mimicking an online retail experience, I decided to create a website containing a collection of scents familiar or interesting to me. I wanted to translate my experiences of and memories associated with these scents into an interactive webpage everyone can play around with. Everytime you refresh the page, three random scents appear.<br><br> Making this project was very much an iterative process, starting with sketching a very rough wireframe that I loosely followed. I looked at various perfume retail websites to gain inspiration for how they represented smell visually. I chose to have each image pop up randomly on the page after each click to mimic the idea of scent particles being sprayed out. <a href="https://joyhsu0301.github.io/core-lab/final/index.html" target="_blank" class="links">Click here</a> to go to the website! </p>
+	<p>Mimicking an online retail experience, I decided to create a website containing a collection of scents familiar to me. I wanted to translate my memories associated with these scents into an interactive webpage everyone can play around with.<br><br> Making this project was very much an iterative process, starting with sketching a very <span class="hiddentext">rough wireframe</span><span class="hiddenimg"><img src="images/sketch.jpg" width="250"></span> that I loosely followed. I chose to have each image pop up randomly on the page after each click to mimic the idea of scent particles being sprayed out. <a href="https://joyhsu0301.github.io/core-lab/final/index.html" target="_blank" class="links">Click here</a> to go to the website! </p>
 
 	<img src="images/scentlib3.png">
 	<img src="images/scentlib1.png">

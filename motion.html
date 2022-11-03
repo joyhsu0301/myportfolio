@@ -140,8 +140,22 @@
 				margin-bottom: 60px;
 			}
 			#home_text {
+				display: none;
+			}
+			#home {
+				display: none;
+			}
+			#mobile_home_text {
 				display: inline;
+				position: fixed;
+				left: 43%;
+				top: 92.4%;
+				color: rgb(0,0,255);
 				z-index: 10;
+			}
+			#home_link {
+				text-decoration: none;
+				color: rgb(0,0,255);;
 			}
 			#leftarrow {
 				font-size: 30px;
@@ -151,8 +165,32 @@
 				right: 20px;
 				z-index: 10;
 			}
+			#rightarrow {
+				font-size: 30px;
+				position: fixed;
+				color: black;
+				top: 94%;
+				left: 20px;
+				z-index: 10;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+				margin-bottom: 20px;
+				margin-top: 10px;
+			}
+			.hiddentext:hover ~ .hiddenimg {
+				display: none;
+			}
+			.hiddentext {
+				color: black;
+			}
 		}	
 	</style>
+
+	<div id="mobile_home_text">
+		<h2><a id="home_link" href="index.html">home</a></h2>
+	</div>
 
 	<div class="arrows">
 		<a href="scent_lib.html"><div id="rightarrow">&#8592;</div></a>

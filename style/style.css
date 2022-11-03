@@ -249,9 +249,6 @@ h1 {
 		font-size: 18px;
 		font-family: 'spacegroteskbold';
 	}
-	#scrollarrow {
-		display: none;
-	}
 
 	/*.active, .collapsible:hover {
 		background-color: blue;

@@ -347,14 +347,30 @@ $(document).ready(function(){
 		copyToClipboard();
 	});
 
-	$(window).bind('scroll', function() {
-     if ($(window).scrollLeft() > 200) {
-         $('#scrollarrow').hide(300);
-     }
-     else {
-         $('#scrollarrow').show(600);
-     }
-	});
+	// $(window).bind('scroll', function() {
+ //     if ($(window).scrollLeft() > 200) {
+ //         $('#scrollarrow').hide(300);
+ //     }
+ //     else {
+ //         $('#scrollarrow').show(600);
+ //     }
+	// });
+
+	const mediaQuery = window.matchMedia('(min-width: 700px)')
+		if (mediaQuery.matches) {
+	  // alert('Media Query Matched!')
+	  //the scrolling alert will appear
+	  $(window).bind('scroll', function() {
+	     if ($(window).scrollLeft() > 200) {
+	         $('#scrollarrow').hide(300);
+	     }
+	     else {
+	         $('#scrollarrow').show(600);
+	     }
+		});
+	} else {
+		$('#scrollarrow').css({'display': 'none'});
+	}
 
 
 
